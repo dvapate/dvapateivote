@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Два паштета и вот это</title>
+</head>
+<body>
+
+<!-- Pate block -->
+
+<a href="pate.html">
+
+<div class="block-pate" id="shake">
+    <div class="block-pate-text">ДВА ПАШТЕТА</div>
+
+    <div class="block-pate-grad" id="pate1">
+    <img src="media/front-pate-can.svg" alt="" href="">
+    </div>
+
+    <span class="block-i-text">
+        и
+    </span>
+</div>
+
+</a>
+
+<!-- VOTETO block -->
+<a href="voteto.html">
+
+<div class="block-voteto">
+    <div class="block-voteto-text">ВОТ ЭТО</div>
+
+    <img src="media/horse.png" alt="" id="horse" >
+    <img src="media/duck.png" alt="" id="duck">
+
+</div>
+
+</a>
+
+<script>
+    let horse = document.getElementById("horse");
+    let duck = document.getElementById("duck");
+    let pate = document.getElementById("pate1");
+    
+    duck.onmouseover = function() {mouseOver(duck , horse)};
+    duck.onmouseout = function() {mouseOut(duck , horse)};
+
+    horse.onmouseover = function() {mouseOver(duck , horse)};
+    horse.onmouseout = function() {mouseOut(duck , horse)};
+
+    pate.onmouseover = function() {mouseOver(pate , 0)};
+    pate.onmouseout = function() {mouseOut(pate , 0)};
+
+    function mouseOver(thing, some) {
+        thing.style.webkitAnimationPlayState = "running";
+        some.style.webkitAnimationPlayState = "running";
+    }
+
+    function mouseOut(thing, some) {
+        thing.style.webkitAnimationPlayState = "paused";
+        some.style.webkitAnimationPlayState = "paused";
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+body, html {
+  height: 100vh;
+  position: relative;
+  display: block;
+  font-family: "Cormorant Garamond", sans-serif;
+  color: #DCDCDC;
+  background: #111;
+  margin: 0;
+}
+
+a, a:visited {
+  color: #eee;
+  text-decoration: none;
+}
+
+.block-i-text {
+  position: absolute;
+  z-index: 10;
+  font-size: 6vh;
+  text-align: left;
+  left: 98%;
+  top: 5vw;
+}
+
+@media (min-width: 1280px) {
+  .block-i-text {
+    font-size: 6vh;
+  }
+}
+
+.block-pate {
+  position: absolute;
+  z-index: 1;
+  width: 50vw;
+  height: 100vh;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.block-pate:before {
+  position: absolute;
+  z-index: 1;
+  width: 50vw;
+  height: 100vh;
+  background: url("../media/front-pate-back.jpg") no-repeat;
+  background-size: cover;
+  background-position: right;
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: "";
+}
+
+.block-pate:hover:before {
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+  cursor: pointer;
+}
+
+.block-pate-text {
+  position: relative;
+  z-index: 5;
+  font-size: 6vh;
+  text-align: center;
+  padding: 5vw;
+}
+
+@media (min-width: 1280px) {
+  .block-pate-text {
+    font-size: 6vh;
+  }
+}
+
+.block-pate img {
+  z-index: 6;
+  position: relative;
+  padding: 7.5vh;
+  width: 30vh;
+  height: auto;
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.block-pate img:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.block-pate-grad {
+  z-index: 5;
+  position: absolute;
+  top: 27.5vh;
+  left: 12vw;
+  width: 45vh;
+  height: auto;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation: pulse 1s linear infinite;
+          animation: pulse 1s linear infinite;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.block-pate-grad:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
+  }
+  15% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 31%, rgba(0, 0, 0, 0) 57%);
+  }
+  30% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 32%, rgba(0, 0, 0, 0) 60%);
+  }
+  45% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 33%, rgba(0, 0, 0, 0) 65%);
+  }
+  60% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 33%, rgba(0, 0, 0, 0) 65%);
+  }
+  75% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 32%, rgba(0, 0, 0, 0) 60%);
+  }
+  90% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 31%, rgba(0, 0, 0, 0) 57%);
+  }
+  100% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
+  }
+  15% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 31%, rgba(0, 0, 0, 0) 57%);
+  }
+  30% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 32%, rgba(0, 0, 0, 0) 60%);
+  }
+  45% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 33%, rgba(0, 0, 0, 0) 65%);
+  }
+  60% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 33%, rgba(0, 0, 0, 0) 65%);
+  }
+  75% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 32%, rgba(0, 0, 0, 0) 60%);
+  }
+  90% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 31%, rgba(0, 0, 0, 0) 57%);
+  }
+  100% {
+    background: radial-gradient(35vh 38vh, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
+  }
+}
+
+.block-voteto {
+  position: absolute;
+  z-index: 1;
+  left: 50vw;
+  width: 50vw;
+  height: 100vh;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.block-voteto:hover {
+  z-index: 1;
+  cursor: pointer;
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.block-voteto img {
+  z-index: 5;
+  position: absolute;
+  top: 35vh;
+  left: 13vw;
+  width: 50vh;
+  height: auto;
+  -webkit-filter: sepia(55%);
+          filter: sepia(55%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#duck {
+  top: 28vh;
+  left: 18vw;
+  width: 20vh;
+}
+
+#horse {
+  -webkit-animation: shake 0.3s linear infinite;
+          animation: shake 0.3s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+#duck {
+  animation: shake 0.25s linear infinite alternate-reverse;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+.block-voteto-text {
+  position: relative;
+  z-index: 5;
+  font-size: 6vh;
+  text-align: center;
+  padding: 5vw;
+}
+
+@media (min-width: 1280px) {
+  .block-voteto-text {
+    font-size: 6vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */

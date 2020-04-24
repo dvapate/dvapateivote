@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/pate.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Document</title>
+    
+    <script>
+        $(document).ready(function() {
+          $("#img1").show();
+          $("#td1").show();
+          });
+        var count = 1;
+        $(document).ready(function(){
+          $("#button2").click(function(){
+            $("#img" + count).hide();
+            $("#td" + count).hide();
+            count++;
+            if (count > 4)
+          count = 1;
+            $("#img" + count).fadeIn("slow");
+            $("#td" + count).fadeIn("slow");
+          });
+          $("#button1").click(function(){
+            $("#img" + count).hide();
+            $("#td" + count).hide();
+            count--;
+            if (count < 1)
+          count = 4;
+            $("#img" + count).fadeIn("slow");
+            $("#td" + count).fadeIn("slow");
+          });
+        });
+    </script>
+
+</head>
+<body>
+<div class="gradient">
+  <div class="back">
+    <a href="index.html">
+    Назад
+    </a>
+  </div>
+
+  <div class="gallery">
+
+    <div class="table">
+      <table id="td1">
+        <tr>
+          <td colspan="2" class="heading">Паштет «Печень коня с инжиром»</td>
+        </tr>
+        <tr>
+          <td>Состав</td>
+          <td>Печень коня, инжир, инжирный бульон (вода, инжир), лук белый, масло сливочное, вино красное, чеснок, жир коня, соль, белый перец, красный перец
+          </td>
+        </tr>
+        <tr>
+          <td>Энергетическая ценность</td>
+          <td>Белки 10.5
+            Жиры 18.5
+            Углеводы 12.1
+            Калории 258</td>
+        </tr>
+        <tr>
+          <td>Температура хранения</td>
+          <td>0. . .+6, при влажности не более 75%</td>
+        </tr>
+        <tr>
+          <td>Срок хранения</td>
+          <td>90 суток</td>
+        </tr>
+      </table>
+
+      <table id="td2">
+        <tr>
+          <td colspan="2" class="heading">Паштет «Куриная печень с абсентом»</td>
+        </tr>
+        <tr>
+          <td>Состав</td>
+          <td>Куриная печень, лук белый, вода, масло сливочное, абсент, куриный жир, нитритная соль, белый перец, сорбат калия
+          </td>
+        </tr>
+        <tr>
+          <td>Энергетическая ценность</td>
+          <td>Белки 10.5
+            Жиры 18.5
+            Углеводы 12.1
+            Калории 258</td>
+        </tr>
+        <tr>
+          <td>Температура хранения</td>
+          <td>0. . .+6, при влажности не более 75%</td>
+        </tr>
+        <tr>
+          <td>Срок хранения</td>
+          <td>90 суток</td>
+        </tr>
+      </table>
+
+      <table id="td3">
+        <tr>
+          <td colspan="2" class="heading">Паштет «Копчёной скумбрия с жжёным луком»</td>
+        </tr>
+        <tr>
+          <td>Состав</td>
+          <td>Скумбрия горячего копчения, лук зеленый, бульон (вода, хондаши), масло сливочное, масло подсолнечное, сычуаньский перец, белый перец, сорбат калия
+          </td>
+        </tr>
+        <tr>
+          <td>Энергетическая ценность</td>
+          <td>Белки 10.5
+            Жиры 18.5
+            Углеводы 12.1
+            Калории 258</td>
+        </tr>
+        <tr>
+          <td>Температура хранения</td>
+          <td>0. . .+6, при влажности не более 75%</td>
+        </tr>
+        <tr>
+          <td>Срок хранения</td>
+          <td>90 суток</td>
+        </tr>
+      </table>
+
+      <table id="td4">
+        <tr>
+          <td colspan="2" class="heading">Паштет «Грибы с водорослями»</td>
+        </tr>
+        <tr>
+          <td>Состав</td>
+          <td>Шампиньоны, лисички, бельон (вода, водоросли комбу и нори), лук белый, масло сливочное, масло подсолнечное, соевый соус, устричный соус, чеснок, водоросли комбу и нори, белый перец, сорбат калия
+          </td>
+        </tr>
+        <tr>
+          <td>Энергетическая ценность</td>
+          <td>Белки 2.3
+            Жиры 14.0
+            Углеводы 2.9
+            Калории 146</td>
+        </tr>
+        <tr>
+          <td>Масса нетто</td>
+          <td>110 гр.</td>
+        </tr>
+        <tr>
+          <td>Срок хранения</td>
+          <td>90 суток</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="img_wrapper">
+      <div id="button1">
+        <img src="media/pate/arr-left.svg" alt="">
+      </div>
+
+      <img src="media/pate/horse.svg" alt="" id="img1">
+      <img src="media/pate/chicken.svg" alt="" id="img2">
+      <img src="media/pate/skumbria.svg" alt="" id="img3">
+      <img src="media/pate/shrooms.svg" alt="" id="img4">
+      
+      <div id="button2">
+        <img src="media/pate/arr-right.svg" alt="">
+      </div>
+    </div>
+    
+
+
+
+  </div>
+
+    <div class="contacts">
+      <a href="contacts.html">
+        Контакты
+      </a>
+    </div>
+</div>
+</body>
+</html>

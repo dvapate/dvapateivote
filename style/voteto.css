@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+html, body {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 62.5vw auto;
+      grid-template-columns: auto 62.5vw auto;
+}
+
+.gallery {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  margin: 0 auto;
+  height: 100vh;
+  width: 62.5vw;
+  display: none;
+}
+
+#img1 .image, #img2 .image, #img3 .image, #img4 .image, #img5 .image, #img6 .image, #img7 .image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 40vh;
+  max-height: 70vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#img7 .image {
+  top: 0;
+  left: 5vw;
+  width: 80%;
+}
+
+.sepia {
+  -webkit-filter: sepia(100%);
+          filter: sepia(100%);
+}
+
+#duck01 {
+  position: absolute;
+  z-index: -1;
+  width: 20vw;
+  right: 5vw;
+  bottom: 35vh;
+}
+
+#duck02 {
+  position: absolute;
+  z-index: -1;
+  width: 20vw;
+  left: 5vw;
+  bottom: 32vh;
+  -webkit-transform: rotate(160deg);
+          transform: rotate(160deg);
+}
+
+#duck03 {
+  position: absolute;
+  z-index: -1;
+  width: 20vw;
+  left: 5vw;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  bottom: 35vh;
+}
+
+#duck04 {
+  position: absolute;
+  z-index: -1;
+  width: 20vw;
+  right: 5vw;
+  bottom: 32vh;
+  -webkit-transform: scaleX(-1) rotate(160deg);
+          transform: scaleX(-1) rotate(160deg);
+}
+
+#salmon01 {
+  position: absolute;
+  z-index: -1;
+  width: 50vw;
+  left: 0vw;
+  bottom: 15vw;
+  -webkit-transform: scaleX(-1) rotate(-45deg);
+          transform: scaleX(-1) rotate(-45deg);
+}
+
+#salmon02 {
+  position: absolute;
+  z-index: -1;
+  width: 40vw;
+  right: 0vw;
+  bottom: 20vw;
+  -webkit-transform: scaleX(-1) rotate(45deg);
+          transform: scaleX(-1) rotate(45deg);
+}
+
+#jerks01 {
+  position: absolute;
+  z-index: -1;
+  width: 30vw;
+  left: 5vw;
+  bottom: 20vh;
+}
+
+#quail01 {
+  position: absolute;
+  z-index: -1;
+  width: 25vw;
+  right: 0vw;
+  bottom: 38vh;
+  -webkit-transform: scaleX(-1) rotate(-10deg);
+          transform: scaleX(-1) rotate(-10deg);
+  -webkit-filter: blur(1px) sepia(80%);
+          filter: blur(1px) sepia(80%);
+}
+
+@media (min-width: 1200px) {
+  #quail01 {
+    bottom: 48vh;
+  }
+}
+
+#quail02 {
+  position: absolute;
+  z-index: -1;
+  width: 20vw;
+  right: 9vw;
+  bottom: 39vh;
+  -webkit-filter: blur(0.1px) sepia(80%);
+          filter: blur(0.1px) sepia(80%);
+}
+
+@media (min-width: 1200px) {
+  #quail02 {
+    bottom: 49vh;
+  }
+}
+
+#prawn01 {
+  position: absolute;
+  z-index: -1;
+  width: 25vw;
+  left: -1vw;
+  bottom: 30vh;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+@media (max-width: 1100px) {
+  #prawn01 {
+    bottom: 25vh;
+  }
+}
+
+#fedya01 {
+  position: absolute;
+  z-index: -1;
+  width: 8vw;
+  right: 15vw;
+  bottom: 15vh;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#fedya02 {
+  position: absolute;
+  z-index: -1;
+  width: 15vw;
+  left: 10vw;
+  bottom: 7vh;
+  -webkit-transform: scaleX(-1) rotate(-5deg);
+          transform: scaleX(-1) rotate(-5deg);
+}
+
+.text-vert, .text-vert-small, .text-bottom {
+  margin-top: 3vh;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5vh;
+  text-align: center;
+  color: #eee;
+}
+
+.text-vert-small {
+  margin-top: 0vh;
+  font-size: 3.5vh;
+}
+
+.text-bottom {
+  margin-top: 65vh;
+}
+
+div#button1 {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  /*  background: rgba(255, 255, 255, 0.2); */
+  top: 50%;
+  left: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+div#button1 img {
+  position: absolute;
+  -webkit-filter: sepia(50%);
+          filter: sepia(50%);
+  width: 15vh;
+  margin-right: 1vw;
+  margin-left: 2vw;
+}
+
+div#button2 {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  /* background: rgba(255, 255, 255, 0.2); */
+  top: 50%;
+  right: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+div#button2 img {
+  position: absolute;
+  -webkit-filter: sepia(50%);
+          filter: sepia(50%);
+  width: 15vh;
+  margin-right: 2vw;
+  margin-left: 1vw;
+  right: 0;
+}
+
+div#button1:hover, div#button2:hover {
+  margin: 0 2vw;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.back {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5vh;
+  text-align: left;
+  color: #eee;
+  padding-top: 3vh;
+  padding-left: 5vw;
+}
+
+.back a, .back a:visited {
+  color: #eee;
+  text-decoration: none;
+}
+
+.contacts {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5vh;
+  text-align: right;
+  color: #eee;
+  padding-top: 30px;
+  padding-right: 5vw;
+}
+
+.contacts a, .contacts a:visited {
+  color: #eee;
+  text-decoration: none;
+}
+/*# sourceMappingURL=voteto.css.map */
