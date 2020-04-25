@@ -2,7 +2,10 @@ Website for "Два паштета и вот это"
 
 # TODO
 
-- [ ] PATE GALLERY
+- [ ] Favicon
+- [ ] Octopus animation cleaned
+
+- [x] PATE GALLERY
 
     - [x] Pate pictures cleaned
     - [x] Bake background image (Bruegel or what with shading of black)
@@ -15,9 +18,9 @@ Website for "Два паштета и вот это"
     - [x] Consider style
 
     - [x] jQuery scrolling
-    - [ ] Load-on-demand
+    - [x] Load-on-demand
 
-    #B - [ ] Mobile look
+    #B - [x] Mobile look
     #B - [x] Widescreen look
 
 
@@ -46,10 +49,15 @@ Website for "Два паштета и вот это"
 
         #B - [x] VOTETO secrets; should they be on main? Can you do that?
 
-    - [x] CONTACTS
-
-        - [x] Template
-        - [x] Correctness
+ 
         
     #B - [x] Widescreen look
-    #B - [ ] If touch screen animate
+    #B - [x] If touch screen animate
+
+- [ ] CONTACTS
+
+    - [ ] New text
+    - [ ] Stylish!
+
+    - [x] Template
+    - [x] Correctness
