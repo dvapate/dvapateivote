@@ -11,6 +11,9 @@
     <title>Document</title>
     
     <script>
+      $(window).on('load', function(){
+          $('#cover').fadeOut(1000);
+          })
         $(document).ready(function() {
           $("#img1").show();
           });
@@ -35,6 +38,7 @@
 
 </head>
 <body>
+  <div id="cover"></div>
   <div class="back">
     <a href="index.html">
     Назад
