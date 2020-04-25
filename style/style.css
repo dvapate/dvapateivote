@@ -4,9 +4,10 @@ body, html {
   position: relative;
   display: block;
   font-family: "Cormorant Garamond", sans-serif;
-  color: #DCDCDC;
+  color: #eee;
   background: black;
   margin: 0;
+  overflow: hidden;
 }
 
 a, a:visited {
@@ -23,7 +24,7 @@ a, a:visited {
   top: 5vw;
 }
 
-@media (min-width: 1280px) {
+@media (min-height: 700px) {
   .block-i-text {
     font-size: 6vh;
   }
@@ -53,6 +54,13 @@ a, a:visited {
   content: "";
 }
 
+@media (hover: none) {
+  .block-pate:before {
+    -webkit-filter: brightness(60%);
+            filter: brightness(60%);
+  }
+}
+
 .block-pate:hover:before {
   -webkit-filter: brightness(60%);
           filter: brightness(60%);
@@ -67,7 +75,7 @@ a, a:visited {
   padding: 5vw;
 }
 
-@media (min-width: 1280px) {
+@media (min-height: 700px) {
   .block-pate-text {
     font-size: 6vh;
   }
@@ -83,6 +91,13 @@ a, a:visited {
           filter: brightness(40%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media (hover: none) {
+  .block-pate img {
+    -webkit-filter: brightness(80%);
+            filter: brightness(80%);
+  }
 }
 
 .block-pate img:hover {
@@ -106,6 +121,19 @@ a, a:visited {
           animation: pulse 1s linear infinite;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
+  .block-pate-grad {
+    left: 15%;
+  }
+}
+
+@media (hover: none) {
+  .block-pate-grad {
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+  }
 }
 
 .block-pate-grad:hover {
@@ -186,36 +214,64 @@ a, a:visited {
   transition: 0.5s;
 }
 
-.block-voteto img {
+#duck {
+  z-index: 5;
+  position: absolute;
+  top: 28vh;
+  left: 18vw;
+  width: 20vh;
+  height: auto;
+  animation: shake 0.25s linear infinite alternate-reverse;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-filter: sepia(60%) contrast(110%);
+          filter: sepia(60%) contrast(110%);
+}
+
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
+  #duck {
+    left: 30%;
+  }
+}
+
+#horse {
   z-index: 5;
   position: absolute;
   top: 35vh;
   left: 13vw;
   width: 50vh;
   height: auto;
-  -webkit-filter: sepia(55%);
-          filter: sepia(55%);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#duck {
-  top: 28vh;
-  left: 18vw;
-  width: 20vh;
-}
-
-#horse {
   -webkit-animation: shake 0.3s linear infinite;
           animation: shake 0.3s linear infinite;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
+  -webkit-filter: sepia(60%) contrast(110%);
+          filter: sepia(60%) contrast(110%);
 }
 
-#duck {
-  animation: shake 0.25s linear infinite alternate-reverse;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
+  #horse {
+    left: 15%;
+  }
+}
+
+#octopus {
+  z-index: -1;
+  position: absolute;
+  top: -10vh;
+  right: -25vh;
+  width: 60vh;
+  height: auto;
+  -webkit-filter: sepia(60%) contrast(110%) brightness(90%);
+          filter: sepia(60%) contrast(110%) brightness(90%);
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
+  #octopus {
+    right: -25vh;
+  }
 }
 
 @-webkit-keyframes shake {
@@ -278,7 +334,7 @@ a, a:visited {
   padding: 5vw;
 }
 
-@media (min-width: 1280px) {
+@media (min-height: 700px) {
   .block-voteto-text {
     font-size: 6vh;
   }

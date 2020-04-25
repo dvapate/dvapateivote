@@ -1,11 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
-#cover {
-  background: black;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
 html, body {
   height: 100vh;
   width: 100vw;
@@ -21,6 +14,13 @@ body {
       grid-template-columns: auto 62.5vw auto;
 }
 
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
+  body {
+    -ms-grid-columns: 12.5vw 75vw 12.5vw;
+        grid-template-columns: 12.5vw 75vw 12.5vw;
+  }
+}
+
 .gallery {
   position: relative;
   display: -ms-grid;
@@ -33,23 +33,44 @@ body {
   display: none;
 }
 
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
+  .gallery {
+    width: 75vw;
+  }
+}
+
 #img1 .image, #img2 .image, #img3 .image, #img4 .image, #img5 .image, #img6 .image, #img7 .image {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   min-height: 40vh;
-  max-height: 70vh;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 
+#img5 .image {
+  bottom: -5vh;
+}
+
 #img7 .image {
   top: 0;
   left: 5vw;
   width: 80%;
+}
+
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
+  #img7 .image {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  #img7 .image {
+    width: 90%;
+  }
 }
 
 .sepia {
@@ -105,6 +126,13 @@ body {
           transform: scaleX(-1) rotate(-45deg);
 }
 
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
+  #salmon01 {
+    left: 0vw;
+    bottom: 20vw;
+  }
+}
+
 #salmon02 {
   position: absolute;
   z-index: -1;
@@ -115,6 +143,13 @@ body {
           transform: scaleX(-1) rotate(45deg);
 }
 
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
+  #salmon02 {
+    right: 0vw;
+    bottom: 25vw;
+  }
+}
+
 #jerks01 {
   position: absolute;
   z-index: -1;
@@ -123,37 +158,44 @@ body {
   bottom: 20vh;
 }
 
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  #jerks01 {
+    left: 0vw;
+    bottom: 15vh;
+  }
+}
+
 #quail01 {
   position: absolute;
   z-index: -1;
-  width: 25vw;
-  right: 0vw;
-  bottom: 38vh;
+  width: 15vw;
+  right: 10vw;
+  bottom: 55vh;
   -webkit-transform: scaleX(-1) rotate(-10deg);
           transform: scaleX(-1) rotate(-10deg);
   -webkit-filter: blur(1px) sepia(80%);
           filter: blur(1px) sepia(80%);
 }
 
-@media (min-width: 1200px) {
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
   #quail01 {
-    bottom: 48vh;
+    bottom: 55vh;
   }
 }
 
 #quail02 {
   position: absolute;
   z-index: -1;
-  width: 20vw;
+  width: 25vw;
   right: 9vw;
-  bottom: 39vh;
+  bottom: 45vh;
   -webkit-filter: blur(0.1px) sepia(80%);
           filter: blur(0.1px) sepia(80%);
 }
 
-@media (min-width: 1200px) {
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
   #quail02 {
-    bottom: 49vh;
+    bottom: 45vh;
   }
 }
 
@@ -167,9 +209,16 @@ body {
           transform: rotate(20deg);
 }
 
-@media (max-width: 1100px) {
+@media (min-height: 700px) {
   #prawn01 {
     bottom: 25vh;
+  }
+}
+
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
+  #prawn01 {
+    left: 10vw;
+    bottom: 39vh;
   }
 }
 
@@ -183,6 +232,12 @@ body {
           transform: rotate(0deg);
 }
 
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  #fedya01 {
+    right: 5vw;
+  }
+}
+
 #fedya02 {
   position: absolute;
   z-index: -1;
@@ -193,6 +248,12 @@ body {
           transform: scaleX(-1) rotate(-5deg);
 }
 
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  #fedya02 {
+    left: 5vw;
+  }
+}
+
 .text-vert, .text-vert-small, .text-bottom {
   margin-top: 3vh;
   font-family: 'Cormorant Garamond', serif;
@@ -201,13 +262,31 @@ body {
   color: #eee;
 }
 
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  .text-vert, .text-vert-small, .text-bottom {
+    font-size: 7vh;
+  }
+}
+
 .text-vert-small {
   margin-top: 0vh;
   font-size: 3.5vh;
 }
 
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  .text-vert-small {
+    font-size: 5vh;
+  }
+}
+
 .text-bottom {
   margin-top: 65vh;
+}
+
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  .text-bottom {
+    margin-top: 75vh;
+  }
 }
 
 div#button1 {
@@ -219,11 +298,6 @@ div#button1 {
   left: 0;
   -webkit-transition: 1s;
   transition: 1s;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 div#button1 img {
@@ -233,6 +307,23 @@ div#button1 img {
   width: 15vh;
   margin-right: 1vw;
   margin-left: 2vw;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  div#button1 img {
+    width: 20vh;
+  }
+}
+
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
+  div#button1 img {
+    margin-left: 0.5vw;
+  }
 }
 
 div#button2 {
@@ -244,11 +335,6 @@ div#button2 {
   right: 0;
   -webkit-transition: 1s;
   transition: 1s;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 div#button2 img {
@@ -259,6 +345,23 @@ div#button2 img {
   margin-right: 2vw;
   margin-left: 1vw;
   right: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  div#button2 img {
+    width: 20vh;
+  }
+}
+
+@media only screen and (min-height: 600px) and (max-width: 1380px) {
+  div#button2 img {
+    margin-right: 0.5vw;
+  }
 }
 
 div#button1:hover, div#button2:hover {
@@ -283,6 +386,13 @@ div#button1:hover, div#button2:hover {
   text-decoration: none;
 }
 
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  .back {
+    font-size: 6vh;
+    padding-right: 2vw;
+  }
+}
+
 .contacts {
   -ms-grid-column: 3;
   grid-column: 3;
@@ -290,12 +400,19 @@ div#button1:hover, div#button2:hover {
   font-size: 3.5vh;
   text-align: right;
   color: #eee;
-  padding-top: 30px;
+  padding-top: 3vh;
   padding-right: 5vw;
 }
 
 .contacts a, .contacts a:visited {
   color: #eee;
   text-decoration: none;
+}
+
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  .contacts {
+    font-size: 6vh;
+    padding-right: 2vw;
+  }
 }
 /*# sourceMappingURL=voteto.css.map */

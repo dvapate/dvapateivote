@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@0;1&display=swap");
 body, html {
   height: 100vh;
   position: relative;
@@ -42,9 +43,16 @@ a, a:visited {
   padding: 5vw;
 }
 
-@media (min-width: 1280px) {
+@media (min-height: 600px) and (min-width: 901px) {
   .block-info-text {
     font-size: 36px;
+  }
+}
+
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  .block-info-text {
+    padding: 5vh;
+    padding-left: 5vw;
   }
 }
 
@@ -54,28 +62,68 @@ a, a:visited {
   font-size: 3vh;
   line-height: 140%;
   background-color: black;
-  border-bottom: solid 10px #DCDCDC;
-  border-right: solid 10px #DCDCDC;
-  border-left: solid 10px #acacac;
-  border-top: solid 10px #acacac;
+  border-bottom: solid 5px #DCDCDC;
+  border-right: solid 5px #DCDCDC;
+  border-left: solid 5px #acacac;
+  border-top: solid 5px #acacac;
+}
+
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  .cication {
+    font-size: 5vh;
+  }
 }
 
 .wait {
-  font-size: 4vh;
-  text-align: center;
+  font-size: 3.5vh;
+  text-align: right;
+}
+
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  .wait {
+    text-align: right;
+    font-size: 5.5vh;
+    padding-left: 0vh;
+  }
 }
 
 .contacts {
+  font-family: "Old Standard TT", serif;
   text-align: right;
   list-style-type: none;
-  padding: 10px;
-  padding-top: 5vh;
-  padding-left: 10vw;
-  font-size: 3vh;
+}
+
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  .contacts {
+    font-size: 4vh;
+    text-align: right;
+    padding: 0px;
+    padding-bottom: 1vh;
+    padding-right: 1vh;
+    padding-left: 5vh;
+  }
+}
+
+@media (min-height: 600px) and (min-width: 901px) {
+  .contacts {
+    padding: 10px;
+    padding-top: 5vh;
+    padding-left: 10vw;
+    font-size: 3vh;
+    bottom: 0;
+  }
 }
 
 li {
   padding-top: 1.5vh;
+}
+
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  li {
+    padding: 2vh;
+    display: inline;
+    margin: 0 auto;
+  }
 }
 
 .image {
@@ -93,9 +141,23 @@ li {
           user-select: none;
 }
 
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  .image {
+    display: none;
+  }
+}
+
+#mobile {
+  color: #DCDCDC;
+}
+
+#telegram {
+  color: #DCDCDC;
+}
+
 .back {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 36px;
+  font-size: 3.5vh;
   text-align: left;
   color: #eee;
   padding-top: 3vh;
@@ -105,5 +167,12 @@ li {
 .back a, .back a:visited {
   color: #eee;
   text-decoration: none;
+}
+
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  .back {
+    font-size: 6vh;
+    padding-left: 2vw;
+  }
 }
 /*# sourceMappingURL=contacts.css.map */

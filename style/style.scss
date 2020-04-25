@@ -6,20 +6,19 @@ $oragne :				#ff9029;
 $yellow :				#fffb29;
 $violet :				#f429ff;
 $dark:					#111;
-$pale:					#DCDCDC;
+$pale:					#eee;
+
+@mixin touch {
+	@media (hover: none) { @content; }
+}
 
 @mixin tablet {
-	@media (min-width: 740px) { @content; }
+	@media only screen and (min-height: 600px) and (max-width: 1380px) { @content; }
 }
 
 @mixin desktop {
-	@media (min-width: 1280px) { @content; }
+	@media (min-height: 700px) { @content; }
 }
-
-@mixin widescreen {
-	@media (min-width: 1920px) { @content; }
-}
-
 
 body, html {
 	height: 100vh;
@@ -29,6 +28,7 @@ body, html {
 	color: $pale;
 	background: black;
 	margin: 0;
+	overflow: hidden;
 }
 
 a, a:visited {
@@ -69,6 +69,9 @@ a, a:visited {
 	filter: brightness(30%);
 	transition: 0.5s;
 	content: "";
+	@include touch {
+		filter: brightness(60%);
+	}
 }
 
 .block-pate:hover:before {
@@ -96,6 +99,9 @@ a, a:visited {
 	height: auto;
 	filter: brightness(40%);
 	transition: 0.5s;
+	@include touch {
+		filter: brightness(80%);
+	}
 }
 
 .block-pate img:hover {
@@ -114,6 +120,12 @@ a, a:visited {
 	animation-play-state: paused;
 	animation: pulse 1s linear infinite;
 	transition: 1s;
+	@include tablet {
+		left: 15%;
+	}
+	@include touch {
+		animation-play-state: running;
+	}
 }
 
 .block-pate-grad:hover {
@@ -147,31 +159,48 @@ a, a:visited {
 	transition: 0.5s;
 }
 
-.block-voteto img {
+#duck {
+	z-index: 5;
+	position: absolute;
+	top: 28vh;
+	left: 18vw;
+	width: 20vh;
+	height: auto;
+	animation: shake 0.25s linear infinite alternate-reverse;
+	animation-play-state: paused;
+	filter: sepia(60%) contrast(110%);
+	@include tablet {
+		left: 30%;
+	}
+}
+
+#horse {
 	z-index: 5;
 	position: absolute;
 	top: 35vh;
 	left: 13vw;
 	width: 50vh;
 	height: auto;
-	filter: sepia(55%);
-	transition: 0.5s;
-}
-
-#duck {
-	top: 28vh;
-	left: 18vw;
-	width: 20vh;
-}
-
-#horse {
 	animation: shake 0.3s linear infinite;
 	animation-play-state: paused;
+	filter: sepia(60%) contrast(110%);
+	@include tablet {
+		left: 15%;
+	}
 }
 
-#duck {
-	animation: shake 0.25s linear infinite alternate-reverse;
-	animation-play-state: paused;
+#octopus {
+	z-index: -1;
+	position: absolute;
+	top: -10vh;
+	right: -25vh;
+	width: 60vh;
+	height: auto;
+	filter: sepia(60%) contrast(110%) brightness(90%);
+	transform: rotate(30deg);
+	@include tablet {
+		right: -25vh;
+	}
 }
 
 @keyframes shake {

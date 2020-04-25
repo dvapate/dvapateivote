@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/cover.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="manifest" href="manifest.json">
     <title>Два паштета и вот это</title>
 </head>
 <body>
+
+<div id="cover"></div>
 
 <!-- Pate block -->
 
@@ -18,7 +27,7 @@
     <div class="block-pate-text">ДВА ПАШТЕТА</div>
 
     <div class="block-pate-grad" id="pate1">
-    <img src="media/front-pate-can.svg" alt="" href="">
+        <img src="media/front-pate-can.svg" alt="" >
     </div>
 
     <span class="block-i-text">
@@ -37,6 +46,7 @@
     <img src="media/horse.png" alt="" id="horse" >
     <img src="media/duck.png" alt="" id="duck">
 
+    <img src="media/octopus.png" alt="" id="octopus">
 </div>
 
 </a>
@@ -65,6 +75,9 @@
         some.style.webkitAnimationPlayState = "paused";
     }
 
+    $(window).on('load', function(){
+          $('#cover').fadeOut(1000);
+    })
 </script>
 
 </body>

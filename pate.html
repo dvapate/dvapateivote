@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/cover.css">
     <link rel="stylesheet" href="style/pate.css">
     <link rel="manifest" href="manifest.json">
-    <title>Document</title>
+    <title>Два паштета и вот это</title>
     
     <script>
-        $(document).ready(function() {
-          $("#img1").show();
-          $("#td1").show();
-          });
+        $(window).on('load', function(){
+          $('#cover').fadeOut(1000);
+          $("#img1").fadeIn("slow");
+          $("#td1").fadeIn("slow");
+          })
         var count = 1;
         $(document).ready(function(){
           $("#button2").click(function(){
@@ -40,6 +47,7 @@
 
 </head>
 <body>
+  <div id="cover"></div>
 <div class="gradient">
   <div class="back">
     <a href="index.html">
@@ -56,8 +64,7 @@
         </tr>
         <tr>
           <td>Состав</td>
-          <td>Печень коня, инжир, инжирный бульон (вода, инжир), лук белый, масло сливочное, вино красное, чеснок, жир коня, соль, белый перец, красный перец
-          </td>
+          <td>Печень коня, инжир, инжирный бульон (вода, инжир), лук белый, масло сливочное, вино красное, чеснок, жир коня, соль, белый перец, красный перец</td>
         </tr>
         <tr>
           <td>Энергетическая ценность</td>
@@ -71,8 +78,8 @@
           <td>110 гр.</td>
         </tr>
         <tr>
-          <td>Срок хранения</td>
-          <td>90 суток</td>
+          <td>Условия хранения</td>
+          <td>90 суток, 0...+6&#8451;, при влажности не более 75%</td>
         </tr>
       </table>
 
@@ -97,8 +104,8 @@
           <td>110 гр.</td>
         </tr>
         <tr>
-          <td>Срок хранения</td>
-          <td>90 суток</td>
+          <td>Условия хранения</td>
+          <td>90 суток, 0...+6&#8451;, при влажности не более 75%</td>
         </tr>
       </table>
 
@@ -123,8 +130,8 @@
           <td>110 гр.</td>
         </tr>
         <tr>
-          <td>Срок хранения</td>
-          <td>90 суток</td>
+          <td>Условия хранения</td>
+          <td>90 суток, 0...+6&#8451;, при влажности не более 75%</td>
         </tr>
       </table>
 
@@ -149,8 +156,8 @@
           <td>110 гр.</td>
         </tr>
         <tr>
-          <td>Срок хранения</td>
-          <td>90 суток</td>
+          <td>Условия хранения</td>
+          <td>90 суток, 0...+6&#8451;, при влажности не более 75%</td>
         </tr>
       </table>
     </div>

@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/cover.css">
     <link rel="stylesheet" href="style/contacts.css">
     <link rel="manifest" href="manifest.json">
     <title>Два паштета и вот это</title>
 </head>
 <body>
 
-
+<div id="cover"></div>
 
 <div class="block-info">
 
@@ -30,7 +37,7 @@
         Ждём ваши предложения и фантазии.
         </p>
         <ul class="contacts">
-        <li><a href="tel:+79645191290" id="mobile">+7 964 519 12 90</a></li>
+        <li><a href="tel:+7xxx5191290" id="mobile">+7 xxx 519 12 90</a></li>
         <li><a href="tg://resolve?domain=dvapashteta" id="telegram">Телеграм</a></li>
         </ul>
 
@@ -41,6 +48,10 @@
 <div class="block-photo">
 
 </div>
-
+<script>
+$(window).on('load', function(){
+    $('#cover').fadeOut(1000);
+    })
+</script>
 </body>
 </html>

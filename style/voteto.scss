@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 
+
+@mixin mobile {
+	@media only screen and (max-height: 600px) and (max-width: 900px) { @content; }
+}
+
+@mixin tablet {
+	@media only screen and (min-height: 600px) and (max-width: 1380px) { @content; }
+}
+
 @mixin desktop {
-	@media (min-width: 1200px) { @content; }
+	@media (min-height: 700px) { @content; }
 }
 
-@mixin desktop-11 {
-	@media (max-width: 1100px) { @content; }
-}
-
-#cover {
-  background: black;
-  //background: url("to/your/ajaxloader.gif") no-repeat scroll center center #FFF;
-  position: absolute;
-  height: 100%;
-  width: 100%;
+@mixin big-desktop {
+	@media (min-height: 1000px) { @content; }
 }
 
 html,body {
   height: 100vh;
   width:  100vw;
-  
 }
 
 body {
@@ -27,7 +27,11 @@ body {
 	background: #000;
 	overflow: hidden;
 	display: grid;
-	grid-template-columns: auto 62.5vw auto;
+  grid-template-columns: auto 62.5vw auto;
+  @include tablet {
+    grid-template-columns: 12.5vw 75vw 12.5vw;
+  }
+
 }
 
 .gallery {
@@ -38,6 +42,10 @@ body {
   height: 100vh;
   width: 62.5vw;
   display: none;
+  @include tablet {
+    width: 75vw;
+  }
+
 }
 
 #img1, #img2, #img3, #img4, #img5, #img6, #img7 {
@@ -47,8 +55,13 @@ body {
     bottom: 0;
     width: 100%;
     min-height: 40vh;
-    max-height: 70vh;
     user-select: none;   
+  }
+}
+
+#img5 {
+  .image {
+    bottom: -5vh;
   }
 }
 
@@ -57,6 +70,12 @@ body {
     top: 0;
     left: 5vw;
     width: 80%;
+    @include tablet {
+      width: 90%;
+    }
+    @include mobile {
+      width: 90%;
+    }
   }
 }
 
@@ -106,6 +125,10 @@ body {
   left: 0vw;
   bottom: 15vw;
   transform: scaleX(-1) rotate(-45deg);
+  @include tablet {
+    left: 0vw;
+    bottom: 20vw;
+  }
 }
 
 #salmon02 {
@@ -115,6 +138,10 @@ body {
   right: 0vw;
   bottom: 20vw;
   transform: scaleX(-1) rotate(45deg);
+  @include tablet {
+    right: 0vw;
+    bottom: 25vw;
+  }
 }
 
 #jerks01 {
@@ -123,30 +150,34 @@ body {
   width: 30vw;
   left: 5vw;
   bottom: 20vh;
+  @include mobile {
+    left: 0vw;
+    bottom: 15vh;
+  }
 }
 
 #quail01 {
   position: absolute;
   z-index: -1;
-  width: 25vw;
-  right: 0vw;
-  bottom: 38vh;
+  width: 15vw;
+  right: 10vw;
+  bottom: 55vh;
   transform: scaleX(-1) rotate(-10deg);
   filter: blur(1px) sepia(80%);
-  @include desktop {
-		bottom: 48vh;
+  @include tablet {
+    bottom: 55vh;
 	}
 }
 
 #quail02 {
   position: absolute;
   z-index: -1;
-  width: 20vw;
+  width: 25vw;
   right: 9vw;
-  bottom: 39vh;
+  bottom: 45vh;
   filter: blur(0.1px) sepia(80%);
-  @include desktop {
-		bottom: 49vh;
+  @include tablet {
+    bottom: 45vh;
 	}
 }
 
@@ -157,9 +188,13 @@ body {
   left: -1vw;
   bottom: 30vh;
   transform: rotate(20deg);
-  @include desktop-11 {
+  @include desktop {
 		bottom: 25vh;
-	}
+  }
+  @include tablet {
+    left: 10vw;
+    bottom: 39vh;
+  }
 }
 
 #fedya01 {
@@ -169,7 +204,9 @@ body {
   right: 15vw;
   bottom: 15vh;
   transform: rotate(0deg);
-
+  @include mobile {
+    right: 5vw;
+	}
 }
 
 #fedya02 {
@@ -179,7 +216,9 @@ body {
   left: 10vw;
   bottom: 7vh;
   transform: scaleX(-1) rotate(-5deg);
-
+  @include mobile {
+    left: 5vw;
+	}
 }
 
 .text-vert, .text-vert-small, .text-bottom {
@@ -187,16 +226,25 @@ body {
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 5vh;
 	text-align: center;
-	color: #eee;
+  color: #eee;
+  @include mobile {
+    font-size: 7vh;
+	}
 }
 
 .text-vert-small {
 	margin-top: 0vh;
-	font-size: 3.5vh;
+  font-size: 3.5vh;
+  @include mobile {
+    font-size: 5vh;
+	}
 }
 
 .text-bottom {
-	margin-top: 65vh;
+  margin-top: 65vh;
+  @include mobile {
+    margin-top: 75vh;
+	}
 }
  
 div#button1 {
@@ -210,12 +258,19 @@ div#button1 {
     width: 15vh;
     margin-right: 1vw;
     margin-left:  2vw;
+    cursor: pointer;
+    user-select: none;
+    @include mobile {
+      width: 20vh;
+    }
+    @include tablet {
+      margin-left:  0.5vw;
+    }
   }
   top: 50%;
   left: 0;
   transition: 1s;
-  cursor: pointer;
-  user-select: none;
+
 }
 
 div#button2 {
@@ -230,12 +285,19 @@ div#button2 {
     margin-right:2vw;
     margin-left: 1vw;
     right: 0;
+    cursor: pointer;
+    user-select: none;
+    @include mobile {
+      width: 20vh;
+    }
+    @include tablet {
+      margin-right: 0.5vw;
+    }
   }
   top: 50%; 
   right: 0;
   transition: 1s;
-  cursor: pointer;
-  user-select: none;
+
 }
 
 div#button1:hover,div#button2:hover {
@@ -255,6 +317,10 @@ div#button1:hover,div#button2:hover {
     color: #eee;
     text-decoration: none;
   }
+  @include mobile {
+    font-size: 6vh;
+    padding-right: 2vw;
+	}
 }
 
 .contacts {
@@ -263,10 +329,14 @@ div#button1:hover,div#button2:hover {
 	font-size: 3.5vh;
 	text-align: right;
   color: #eee;
-  padding-top: 30px;
+  padding-top: 3vh;
   padding-right: 5vw;
   a, a:visited {
     color: #eee;
     text-decoration: none;
   }
+  @include mobile {
+    font-size: 6vh;
+    padding-right: 2vw;
+	}
 }

@@ -21,7 +21,7 @@ Website for "Два паштета и вот это"
     #B - [x] Widescreen look
 
 
-- [ ] VOTETO GALLERY
+- [x] VOTETO GALLERY
 
     - [x] Redo test_gallery with relevant z-indexes
 
@@ -29,9 +29,9 @@ Website for "Два паштета и вот это"
     #B - :DEPRECATED make them secret maybe?
 
     - [x] jQuery scrolling
-    - [ ] Load-on-demand
+    - [x] Load-on-demand
 
-    #B - [ ] Mobile look
+    #B - [x] Mobile look
     #B - [x] Widescreen look
 
 - [x] FRONT PAGE
