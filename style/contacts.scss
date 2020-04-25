@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300&display=swap');
+
+$camblue :				#293bff;
+$lightblue :			#bacdf0;
+$orange :				#ecd3bb;
+$yellow :				#fffb29;
+$violet :				#f429ff;
+$dark:					#111;
+$pale:					#DCDCDC;
+$grey:					#acacac;
+
+@mixin tablet {
+	@media (min-width: 740px) { @content; }
+}
+
+@mixin desktop {
+	@media (min-width: 1280px) { @content; }
+}
+
+@mixin widescreen {
+	@media (min-width: 1920px) { @content; }
+}
+
+
+body, html {
+	height: 100vh;
+	position: relative;
+	display: block;
+	font-family: "Cormorant Garamond", sans-serif;
+	color: $pale;
+	background: $dark;
+	margin: 0;
+	overflow-y: hidden;
+}
+
+a, a:visited {
+    color: #eee;
+    text-decoration: none;
+  }
+
+.block-photo {
+	position: absolute;
+	z-index: 1;
+	width: 50vw;
+	left: 50vw;
+	height: 100vh;
+	transition: 0.5s;
+	background: url("../media/work.jpg") no-repeat;
+	background-size: cover;
+	background-position: right;
+}
+
+.block-info {
+	position: absolute;
+	z-index: 1;
+	width: 50vw;
+	height: 100vh;
+}
+
+.block-info-text {
+	position: relative;
+	z-index: 5;
+	font-size: 24px;
+	padding: 5vw;
+	@include desktop {
+		font-size: 36px;
+	}
+}
+
+.cication {
+	text-align: left;
+	padding: 3vh;
+	font-size: 3vh;
+	line-height: 140%;
+	background-color: black;
+	border-bottom: solid 10px $pale;
+	border-right: solid 10px $pale;
+	border-left: solid 10px $grey;
+	border-top: solid 10px $grey;
+}
+
+.wait {
+	font-size: 4vh;
+	text-align: center;
+}
+
+.contacts {
+	text-align: right;
+	list-style-type: none;
+	padding: 10px;
+	padding-top: 5vh;
+	padding-left: 10vw;
+	font-size: 3vh;
+}
+ 
+li {
+	padding-top: 1.5vh;
+}
+
+.image {
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	bottom: -20vh;
+	width: 30%;
+	height: auto;
+	transform: scaleX(-1);
+	user-select: none;
+}
+
+#mobile {
+	
+}
+
+#telegram {
+	
+}
+
+.back {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 36px;
+	text-align: left;
+	color: #eee;
+	padding-top: 3vh;
+	padding-left: 5vw;
+	a, a:visited {
+	  color: #eee;
+	  text-decoration: none;
+	}
+  }
