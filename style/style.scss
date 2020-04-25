@@ -196,7 +196,7 @@ a, a:visited {
 	right: -25vh;
 	width: 60vh;
 	height: auto;
-	filter: sepia(60%) contrast(110%) brightness(90%);
+	filter: sepia(60%) contrast(110%) brightness(60%);
 	transform: rotate(30deg);
 	@include tablet {
 		right: -25vh;
