@@ -12,29 +12,29 @@ Website for "Два паштета и вот это"
     #B - [x] Make homing radical or crescent glow
 
     - [x] Description table
-    - [ ] Consider style
+    - [x] Consider style
 
     - [x] jQuery scrolling
     - [ ] Load-on-demand
 
     #B - [ ] Mobile look
-    #B - [ ] Widescreen look
+    #B - [x] Widescreen look
 
 
 - [ ] VOTETO GALLERY
 
-    - [ ] Redo test_gallery with relevant z-indexes
+    - [x] Redo test_gallery with relevant z-indexes
 
-    - [ ] use z-indexes to place relevant animal images
-    #B - [ ] make them secret maybe?
+    - [x] use z-indexes to place relevant animal images
+    #B - :DEPRECATED make them secret maybe?
 
     - [x] jQuery scrolling
     - [ ] Load-on-demand
 
     #B - [ ] Mobile look
-    #B - [ ] Widescreen look
+    #B - [x] Widescreen look
 
-- [ ] FRONT PAGE
+- [x] FRONT PAGE
 
     - [x] Make new template possibly?
 
@@ -46,9 +46,10 @@ Website for "Два паштета и вот это"
 
         #B - [x] VOTETO secrets; should they be on main? Can you do that?
 
-    - [ ] CONTACTS
+    - [x] CONTACTS
 
-        - [ ] Template
-        - [ ] Correctness
+        - [x] Template
+        - [x] Correctness
         
-    #B - [ ] Widescreen look
+    #B - [x] Widescreen look
+    #B - [ ] If touch screen animate
