@@ -13,18 +13,64 @@
     display: none;
     background: black;
     /* background: url("to/your/ajaxloader.gif") no-repeat scroll center center #FFF; */
-    position: fixed;
+    position: absolute;
+    z-index: 11;
     height: 100vh;
     width: 100vw;
     color: #eee;
 	font-family: 'Cormorant Garamond', serif;
-    font-size: 6vh;
-    padding: 10vh;
+    font-size: 10vmin;
+    text-align: center;
+}
+
+#rotate-text {
+    position: relative;
+    z-index: 11;
+    text-align: center;
+    top: 25vh;
+}
+
+#octo-rot1 {
+    z-index: 10;
+    width: 50vh;
+    height: auto;
+    position: absolute;
+    top: 40vh;
+    left: 10vh;
+    animation: rotate 13s linear infinite;
+    filter: sepia(60%) brightness(30%);
+}
+
+#octo-rot2 {
+    z-index: 9;
+    width: 75vh;
+    height: auto;
+    position: absolute;
+    top: 0vh;
+    left: -30vh;
+    animation: rotate 15s alternate-reverse infinite;
+    filter: sepia(60%) brightness(20%);
+}
+
+#octo-rot3 {
+    z-index: 8;
+    width: 150vh;
+    height: auto;
+    position: absolute;
+    top: 0vh;
+    left: 0vh;
+    animation: rotate 20s reverse infinite;
+    filter: sepia(60%) brightness(10%);
+}
+
+@keyframes rotate {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
 }
 
 @media only screen and (orientation:portrait){
     #rotate {
-    display: block;
+        display: block;
     }
 }
 
