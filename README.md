@@ -1,9 +1,9 @@
 Website for "Два паштета и вот это"
 
-# TODO
+# DONE
 
-- [ ] Favicon
-- [ ] Octopus animation cleaned
+- [x] Favicon
+- [x] Octopus animation cleaned
 
 - [x] PATE GALLERY
 
@@ -54,10 +54,10 @@ Website for "Два паштета и вот это"
     #B - [x] Widescreen look
     #B - [x] If touch screen animate
 
-- [ ] CONTACTS
+- [x] CONTACTS
 
-    - [ ] New text
-    - [ ] Stylish!
+    - [x] New text
+    - [x] Stylish!
 
     - [x] Template
     - [x] Correctness
