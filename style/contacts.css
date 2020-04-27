@@ -180,7 +180,7 @@ a, a:visited {
   transition: 0.3s;
 }
 
-#telegram:hover {
+#email:hover {
   color: #ffe7bb;
   -webkit-transition: 0.3s;
   transition: 0.3s;
