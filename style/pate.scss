@@ -2,6 +2,7 @@
 
 $dark:					#111;
 $pale:					#DCDCDC;
+$link:						#ffe7bb;
 
 @mixin mobile {
 	@media only screen and (max-height: 600px) and (max-width: 900px) { @content; }
@@ -98,6 +99,7 @@ table, th, td {
 	font-size: 2vmin;
   line-height: 150%;
   letter-spacing: 0.01em;
+
   @include mobile {
     font-size: 3.8vh;
     line-height: 125%;
@@ -111,7 +113,6 @@ table, th, td {
 table {
   width: 40vw;
   height: 50vh;
-  padding: 5vw;
   @include mobile {
     width: 50vw;
     height: 70vh;
@@ -125,6 +126,12 @@ table {
 th, td {
   padding: 10px;
   vertical-align: top;
+  @include desktop {
+    padding: 40px;
+  }
+  @include mobile {
+    padding: 5px;
+  }
 }
 
 th {
@@ -286,10 +293,13 @@ div#button1:hover,div#button2:hover {
   color: #eee;
   padding-top: 3vh;
   padding-left: 5vw;
-  a, a:visited {
-    color: #eee;
-    text-decoration: none;
-  }
+	a, a:visited {
+		color: #eee;
+	  text-decoration: none;
+	}
+	a:hover {
+		color: $link;
+	}
   @include mobile {
     font-size: 6vh;
     padding-right: 2vw;
@@ -305,10 +315,13 @@ div#button1:hover,div#button2:hover {
   color: #eee;
   padding-top: 3vh;
   padding-right: 5vw;
-  a, a:visited {
-    color: #eee;
-    text-decoration: none;
-  }
+	a, a:visited {
+		color: #eee;
+	  text-decoration: none;
+	}
+	a:hover {
+		color: $link;
+	}
   @include mobile {
     font-size: 6vh;
     padding-right: 2vw;

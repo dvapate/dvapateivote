@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 
+$link:						#ffe7bb;
 
 @mixin mobile {
 	@media only screen and (max-height: 600px) and (max-width: 900px) { @content; }
@@ -33,6 +34,10 @@ body {
     grid-template-columns: 12.5vw 75vw 12.5vw;
   }
 
+}
+
+a, a:visited {
+  transition: 0.3s;
 }
 
 .gallery {
@@ -81,7 +86,7 @@ body {
 }
 
 .sepia {
-  filter: sepia(100%);
+  filter: brightness(80%) sepia(90%);
 }
 
 #duck01 {
@@ -99,6 +104,7 @@ body {
   left: 5vw;
   bottom: 32vh;
   transform: rotate(160deg);
+  filter: sepia(200%);
 }
 
 #duck03 {
@@ -190,7 +196,7 @@ body {
   bottom: 30vh;
   transform: rotate(20deg);
   @include desktop {
-		bottom: 25vh;
+		bottom: 29vh;
   }
   @include tablet {
     left: 10vw;
@@ -311,13 +317,15 @@ div#button1:hover,div#button2:hover {
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 3.5vh;
 	text-align: left;
-  color: #eee;
   padding-top: 3vh;
   padding-left: 5vw;
   a, a:visited {
     color: #eee;
     text-decoration: none;
   }
+  a:hover {
+		color: $link;
+	}
   @include mobile {
     font-size: 6vh;
     padding-right: 2vw;
@@ -329,13 +337,15 @@ div#button1:hover,div#button2:hover {
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 3.5vh;
 	text-align: right;
-  color: #eee;
   padding-top: 3vh;
   padding-right: 5vw;
   a, a:visited {
     color: #eee;
     text-decoration: none;
   }
+  a:hover {
+		color: $link;
+	}
   @include mobile {
     font-size: 6vh;
     padding-right: 2vw;

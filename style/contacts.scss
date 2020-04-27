@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@0;1&display=swap');
 
 $dark:					#111;
 $pale:					#DCDCDC;
 $grey:					#acacac;
+$link:						#ffe7bb;
 
 @mixin desktop {
 	@media (min-height: 600px) and (min-width: 901px) { @content; }
@@ -19,15 +19,16 @@ body, html {
 	display: block;
 	font-family: "Cormorant Garamond", sans-serif;
 	color: $pale;
-	background: $dark;
+	background: black;
 	margin: 0;
 	overflow: hidden;
 }
 
 a, a:visited {
     color: #eee;
-    text-decoration: none;
-  }
+	text-decoration: none;
+	transition: 0.3s;
+}
 
 .block-photo {
 	position: absolute;
@@ -58,16 +59,16 @@ a, a:visited {
 	}
 	@include mobile {
 		padding: 5vh;
-		padding-left: 5vw;
+		padding-left: 2vw;
 	}
 }
 
 .cication {
-	text-align: left;
+	text-align: center;
 	padding: 3vh;
 	font-size: 3vh;
 	line-height: 140%;
-	background-color: black;
+	background-color: $dark;
 	border-bottom: solid 5px $pale;
 	border-right: solid 5px $pale;
 	border-left: solid 5px $grey;
@@ -82,40 +83,40 @@ a, a:visited {
 	text-align: right;
 	@include mobile {
 		text-align: right;
-		font-size: 5.5vh;
+		font-size: 5vh;
 		padding-left: 0vh;
 	}
 }
 
+
+
 .contacts {
-	font-family: "Old Standard TT", serif;
+
+	display: block;
+	position: absolute;
+
+	bottom: 5vh;
+	right: 10vh;
 	text-align: right;
+
+	a {
+		box-sizing: border-box;
+		color: lightskyblue;
+		padding: 10px;
+	}
+
 	list-style-type: none;
 
 	@include mobile {
-		font-size: 4vh;
+		font-size: 5vh;
 		text-align: right;
 		padding: 0px;
-		padding-bottom: 1vh;
-		padding-right: 1vh;
-		padding-left: 5vh;
 	}
 	@include desktop {
 		padding: 10px;
 		padding-top: 5vh;
 		padding-left: 10vw;
-		font-size: 3vh;
-		bottom: 0;
-	}
-}
- 
-li {
-
-	padding-top: 1.5vh;
-	@include mobile {
-		padding: 2vh;
-		display: inline;
-		margin: 0 auto;
+		font-size: 2.5vh;
 	}
 }
 
@@ -123,35 +124,47 @@ li {
 .image {
 	position: absolute;
 	z-index: -1;
-	left: 0;
+	left: -20vh;
 	bottom: -20vh;
-	width: 30%;
+	width: 70vh;
 	height: auto;
-	transform: scaleX(-1);
+	transform: rotate(210deg);
 	user-select: none;
+	animation: chrome 15s linear infinite;
 	@include mobile {
-		display: none;
+		width: 70vh;
 	}
 }
 
-#mobile {
-	color: #DCDCDC;
+@keyframes chrome {
+	0% 	{ filter: sepia(80%) hue-rotate(0deg) brightness(10%); }
+	50% { filter: sepia(80%) hue-rotate(359deg) brightness(25%); }
+	100% { filter: sepia(80%) hue-rotate(0deg) brightness(10%); }
 }
 
-#telegram {
-	color: #DCDCDC;
+#mobile:hover {
+	color: $link;
+	transition: 0.3s;
+}
+
+#telegram:hover {
+	color: $link;
+	transition: 0.3s;
 }
 
 .back {
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 3.5vh;
 	text-align: left;
-	color: #eee;
+	color: $link;
 	padding-top: 3vh;
 	padding-left: 5vw;
 	a, a:visited {
-	  color: #eee;
+		color: #eee;
 	  text-decoration: none;
+	}
+	a:hover {
+		color: $link;
 	}
 	@include mobile {
 		font-size: 6vh;

@@ -22,6 +22,11 @@ body {
   }
 }
 
+a, a:visited {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .gallery {
   position: relative;
   display: -ms-grid;
@@ -75,8 +80,8 @@ body {
 }
 
 .sepia {
-  -webkit-filter: sepia(100%);
-          filter: sepia(100%);
+  -webkit-filter: brightness(80%) sepia(90%);
+          filter: brightness(80%) sepia(90%);
 }
 
 #duck01 {
@@ -95,6 +100,8 @@ body {
   bottom: 32vh;
   -webkit-transform: rotate(160deg);
           transform: rotate(160deg);
+  -webkit-filter: sepia(200%);
+          filter: sepia(200%);
 }
 
 #duck03 {
@@ -212,7 +219,7 @@ body {
 
 @media (min-height: 700px) {
   #prawn01 {
-    bottom: 25vh;
+    bottom: 29vh;
   }
 }
 
@@ -377,7 +384,6 @@ div#button1:hover, div#button2:hover {
   font-family: 'Cormorant Garamond', serif;
   font-size: 3.5vh;
   text-align: left;
-  color: #eee;
   padding-top: 3vh;
   padding-left: 5vw;
 }
@@ -385,6 +391,10 @@ div#button1:hover, div#button2:hover {
 .back a, .back a:visited {
   color: #eee;
   text-decoration: none;
+}
+
+.back a:hover {
+  color: #ffe7bb;
 }
 
 @media only screen and (max-height: 600px) and (max-width: 900px) {
@@ -400,7 +410,6 @@ div#button1:hover, div#button2:hover {
   font-family: 'Cormorant Garamond', serif;
   font-size: 3.5vh;
   text-align: right;
-  color: #eee;
   padding-top: 3vh;
   padding-right: 5vw;
 }
@@ -408,6 +417,10 @@ div#button1:hover, div#button2:hover {
 .contacts a, .contacts a:visited {
   color: #eee;
   text-decoration: none;
+}
+
+.contacts a:hover {
+  color: #ffe7bb;
 }
 
 @media only screen and (max-height: 600px) and (max-width: 900px) {

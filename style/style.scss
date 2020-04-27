@@ -13,7 +13,7 @@ $pale:					#eee;
 }
 
 @mixin tablet {
-	@media only screen and (min-height: 600px) and (max-width: 1380px) { @content; }
+	@media only screen and (min-height: 600px) and (max-width: 1120px) { @content; }
 }
 
 @mixin desktop {
@@ -114,14 +114,14 @@ a, a:visited {
 	z-index: 5;
 	position: absolute;
 	top: 27.5vh;
-	left: 12vw;
+	left: 12vmax;
 	width: 45vh;
 	height: auto;
 	animation-play-state: paused;
 	animation: pulse 1s linear infinite;
 	transition: 1s;
 	@include tablet {
-		left: 15%;
+	 	left: 9vh;
 	}
 	@include touch {
 		animation-play-state: running;
@@ -192,11 +192,11 @@ a, a:visited {
 #octopus {
 	z-index: -1;
 	position: absolute;
-	top: -10vh;
-	right: -25vh;
-	width: 60vh;
+	top: -15vh;
+	right: -18vh;
+	width: 50vh;
 	height: auto;
-	filter: sepia(60%) contrast(110%) brightness(60%);
+	filter: sepia(60%) brightness(60%);
 	transform: rotate(30deg);
 	@include tablet {
 		right: -25vh;
@@ -225,7 +225,3 @@ a, a:visited {
 		font-size: 6vh;
 	}
 }
-
-// PATE GALLERY
-
-// VOTETO GALLERY

@@ -1,199 +1,224 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/cover.css">
-    <link rel="stylesheet" href="style/pate.css">
-    <link rel="manifest" href="manifest.json">
-    <title>Два паштета и вот это</title>
-    
-    <script>
-        $(window).on('load', function(){
-          $('#cover').fadeOut(1000);
-          $("#img1").fadeIn("slow");
-          $("#td1").fadeIn("slow");
-          })
-        var count = 1;
-        $(document).ready(function(){
-          $("#button2").click(function(){
-            $("#img" + count).hide();
-            $("#td" + count).hide();
-            count++;
-            if (count > 4)
-          count = 1;
-            $("#img" + count).fadeIn("slow");
-            $("#td" + count).fadeIn("slow");
-          });
-          $("#button1").click(function(){
-            $("#img" + count).hide();
-            $("#td" + count).hide();
-            count--;
-            if (count < 1)
-          count = 4;
-            $("#img" + count).fadeIn("slow");
-            $("#td" + count).fadeIn("slow");
-          });
-        });
-    </script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/cover.css">
+  <link rel="stylesheet" href="style/pate.css">
+
+  <title>Два паштета и вот это</title>
+
+  <script>
+
+  </script>
 
 </head>
+
 <body>
   <div id="cover"></div>
   <div id="rotate">
     <div id="rotate-text">Поверни меня!</div>
-    <img src="media/octopus.png" alt="" id="octo-rot1">
-    <img src="media/octopus.png" alt="" id="octo-rot2">
-    <img src="media/octopus.png" alt="" id="octo-rot3">
+    <img src="media/octopus_front.svg" alt="" id="octo-rot1">
+    <img src="media/octopus_rotate_small.svg" alt="" id="octo-rot2">
+    <img src="media/octopus_rotate_small.svg" alt="" id="octo-rot3">
   </div>
 
-<div class="gradient">
-  <div class="back">
-    <a href="index.html">
-    Назад
-    </a>
-  </div>
-
-  <div class="gallery">
-
-    <div class="table">
-      <table id="td1">
-        <tr>
-          <td colspan="2" class="heading">Паштет «Печень коня с инжиром»</td>
-        </tr>
-        <tr>
-          <td>Состав</td>
-          <td>Печень коня, инжир, инжирный бульон (вода, инжир), лук белый, масло сливочное, вино красное, чеснок, жир коня, соль, белый перец, красный перец</td>
-        </tr>
-        <tr>
-          <td>Энергетическая ценность</td>
-          <td>Белки 10.5
-            Жиры 18.5
-            Углеводы 12.1
-            Калории 258</td>
-        </tr>
-        <tr>
-          <td>Масса нетто</td>
-          <td>110 гр.</td>
-        </tr>
-        <tr>
-          <td>Условия хранения</td>
-          <td>90 суток, 0...+6&#8451;, при влажности не более 75%</td>
-        </tr>
-      </table>
-
-      <table id="td2">
-        <tr>
-          <td colspan="2" class="heading">Паштет «Куриная печень с абсентом»</td>
-        </tr>
-        <tr>
-          <td>Состав</td>
-          <td>Куриная печень, лук белый, вода, масло сливочное, абсент, куриный жир, нитритная соль, белый перец, сорбат калия
-          </td>
-        </tr>
-        <tr>
-          <td>Энергетическая ценность</td>
-          <td>Белки 10.5
-            Жиры 18.5
-            Углеводы 12.1
-            Калории 258</td>
-        </tr>
-        <tr>
-          <td>Масса нетто</td>
-          <td>110 гр.</td>
-        </tr>
-        <tr>
-          <td>Условия хранения</td>
-          <td>90 суток, 0...+6&#8451;, при влажности не более 75%</td>
-        </tr>
-      </table>
-
-      <table id="td3">
-        <tr>
-          <td colspan="2" class="heading">Паштет «Копчёной скумбрия с жжёным луком»</td>
-        </tr>
-        <tr>
-          <td>Состав</td>
-          <td>Скумбрия горячего копчения, лук зеленый, бульон (вода, хондаши), масло сливочное, масло подсолнечное, сычуаньский перец, белый перец, сорбат калия
-          </td>
-        </tr>
-        <tr>
-          <td>Энергетическая ценность</td>
-          <td>Белки 10.5
-            Жиры 18.5
-            Углеводы 12.1
-            Калории 258</td>
-        </tr>
-        <tr>
-          <td>Масса нетто</td>
-          <td>110 гр.</td>
-        </tr>
-        <tr>
-          <td>Условия хранения</td>
-          <td>90 суток, 0...+6&#8451;, при влажности не более 75%</td>
-        </tr>
-      </table>
-
-      <table id="td4">
-        <tr>
-          <td colspan="2" class="heading">Паштет «Грибы с водорослями»</td>
-        </tr>
-        <tr>
-          <td>Состав</td>
-          <td>Шампиньоны, лисички, бельон (вода, водоросли комбу и нори), лук белый, масло сливочное, масло подсолнечное, соевый соус, устричный соус, чеснок, водоросли комбу и нори, белый перец, сорбат калия
-          </td>
-        </tr>
-        <tr>
-          <td>Энергетическая ценность</td>
-          <td>Белки 2.3
-            Жиры 14.0
-            Углеводы 2.9
-            Калории 146</td>
-        </tr>
-        <tr>
-          <td>Масса нетто</td>
-          <td>110 гр.</td>
-        </tr>
-        <tr>
-          <td>Условия хранения</td>
-          <td>90 суток, 0...+6&#8451;, при влажности не более 75%</td>
-        </tr>
-      </table>
+  <div class="gradient">
+    <div class="back">
+      <a href="index.html">
+        Назад
+      </a>
     </div>
 
-    <div class="img_wrapper">
-      <div id="button1">
-        <img src="media/pate/arr-left.svg" alt="">
+    <div class="gallery">
+
+      <div class="table">
+        <table id="td1">
+          <tr>
+            <td colspan="2" class="heading">Паштет «Печень коня с инжиром»</td>
+          </tr>
+          <tr>
+            <td>Состав</td>
+            <td>Печень коня, инжир, инжирный бульон (вода, инжир), лук белый, масло сливочное, вино красное, чеснок, жир
+              коня, соль, белый перец, красный перец</td>
+          </tr>
+          <tr>
+            <td>Энергетическая ценность</td>
+            <td>Белки 10.5
+              Жиры 18.5
+              Углеводы 12.1
+              Калории 258</td>
+          </tr>
+          <tr>
+            <td>Масса нетто</td>
+            <td>110 гр.</td>
+          </tr>
+          <tr>
+            <td>Условия хранения</td>
+            <td>90 суток, 0...+6 &#8451;, при влажности не более 75%</td>
+          </tr>
+        </table>
+
+        <table id="td2">
+          <tr>
+            <td colspan="2" class="heading">Паштет «Куриная печень с абсентом»</td>
+          </tr>
+          <tr>
+            <td>Состав</td>
+            <td>Куриная печень, лук белый, вода, масло сливочное, абсент, куриный жир, нитритная соль, белый перец,
+              сорбат калия
+            </td>
+          </tr>
+          <tr>
+            <td>Энергетическая ценность</td>
+            <td>Белки 10.5
+              Жиры 18.5
+              Углеводы 12.1
+              Калории 258</td>
+          </tr>
+          <tr>
+            <td>Масса нетто</td>
+            <td>110 гр.</td>
+          </tr>
+          <tr>
+            <td>Условия хранения</td>
+            <td>90 суток, 0...+6 &#8451;, при влажности не более 75%</td>
+          </tr>
+        </table>
+
+        <table id="td3">
+          <tr>
+            <td colspan="2" class="heading">Паштет «Копчёной скумбрия с жжёным луком»</td>
+          </tr>
+          <tr>
+            <td>Состав</td>
+            <td>Скумбрия горячего копчения, лук зеленый, бульон (вода, хондаши), масло сливочное, масло подсолнечное,
+              сычуаньский перец, белый перец, сорбат калия
+            </td>
+          </tr>
+          <tr>
+            <td>Энергетическая ценность</td>
+            <td>Белки 10.5
+              Жиры 18.5
+              Углеводы 12.1
+              Калории 258</td>
+          </tr>
+          <tr>
+            <td>Масса нетто</td>
+            <td>110 гр.</td>
+          </tr>
+          <tr>
+            <td>Условия хранения</td>
+            <td>90 суток, 0...+6 &#8451;, при влажности не более 75%</td>
+          </tr>
+        </table>
+
+        <table id="td4">
+          <tr>
+            <td colspan="2" class="heading">Паштет «Грибы с водорослями»</td>
+          </tr>
+          <tr>
+            <td>Состав</td>
+            <td>Шампиньоны, лисички, бельон (вода, водоросли комбу и нори), лук белый, масло сливочное, масло
+              подсолнечное, соевый соус, устричный соус, чеснок, водоросли комбу и нори, белый перец, сорбат калия
+            </td>
+          </tr>
+          <tr>
+            <td>Энергетическая ценность</td>
+            <td>Белки 2.3
+              Жиры 14.0
+              Углеводы 2.9
+              Калории 146</td>
+          </tr>
+          <tr>
+            <td>Масса нетто</td>
+            <td>110 гр.</td>
+          </tr>
+          <tr>
+            <td>Условия хранения</td>
+            <td>90 суток, 0...+6 &#8451;, при влажности не более 75%</td>
+          </tr>
+        </table>
       </div>
 
-      <img src="media/pate/horse.svg" alt="" id="img1">
-      <img src="media/pate/chicken.svg" alt="" id="img2">
-      <img src="media/pate/skumbria.svg" alt="" id="img3">
-      <img src="media/pate/shrooms.svg" alt="" id="img4">
-      
-      <div id="button2">
-        <img src="media/pate/arr-right.svg" alt="">
+      <div class="img_wrapper">
+        <div id="button1">
+          <img src="media/pate/arr-left.svg" alt="">
+        </div>
+
+        <img src="media/pate/horse.svg" alt="" id="img1">
+        <img src="media/pate/chicken.svg" alt="" id="img2">
+        <img src="media/pate/skumbria.svg" alt="" id="img3">
+        <img src="media/pate/shrooms.svg" alt="" id="img4">
+
+        <div id="button2">
+          <img src="media/pate/arr-right.svg" alt="">
+        </div>
       </div>
+
+
+
+
     </div>
-    
-
-
-
-  </div>
 
     <div class="contacts">
       <a href="contacts.html">
         Контакты
       </a>
     </div>
-</div>
+  </div>
+  <script>
+    // Хороший способ дождаться прорисовки интерфейса
+    window.addEventListener("orientationchange", function () {
+
+      var originalBodyStyle = getComputedStyle(document.body).getPropertyValue('display');
+
+      document.body.style.display = 'none';
+
+      setTimeout(function () {
+        document.body.style.display = originalBodyStyle;
+      }, 10);
+    });
+
+    $(window).on('load', function () {
+      $('#cover').fadeOut(500);
+      $("#img1").fadeIn("slow");
+      $("#td1").fadeIn("slow");
+    })
+    var count = 1;
+    $(document).ready(function () {
+      $("#button2").click(function () {
+        $("#img" + count).hide();
+        $("#td" + count).hide();
+        count++;
+        if (count > 4)
+          count = 1;
+        $("#img" + count).fadeIn("slow");
+        $("#td" + count).fadeIn("slow");
+      });
+      $("#button1").click(function () {
+        $("#img" + count).hide();
+        $("#td" + count).hide();
+        count--;
+        if (count < 1)
+          count = 4;
+        $("#img" + count).fadeIn("slow");
+        $("#td" + count).fadeIn("slow");
+      });
+    });
+  </script>
 </body>
+
 </html>

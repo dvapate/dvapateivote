@@ -127,7 +127,6 @@ table, th, td {
 table {
   width: 40vw;
   height: 50vh;
-  padding: 5vw;
 }
 
 @media only screen and (max-height: 600px) and (max-width: 900px) {
@@ -147,6 +146,18 @@ table {
 th, td {
   padding: 10px;
   vertical-align: top;
+}
+
+@media (min-height: 900px) and (min-width: 1440px) {
+  th, td {
+    padding: 40px;
+  }
+}
+
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  th, td {
+    padding: 5px;
+  }
 }
 
 th {
@@ -499,6 +510,10 @@ div#button1:hover, div#button2:hover {
   text-decoration: none;
 }
 
+.back a:hover {
+  color: #ffe7bb;
+}
+
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   .back {
     font-size: 6vh;
@@ -522,6 +537,10 @@ div#button1:hover, div#button2:hover {
 .contacts a, .contacts a:visited {
   color: #eee;
   text-decoration: none;
+}
+
+.contacts a:hover {
+  color: #ffe7bb;
 }
 
 @media only screen and (max-height: 600px) and (max-width: 900px) {

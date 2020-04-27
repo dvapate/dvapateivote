@@ -112,7 +112,7 @@ a, a:visited {
   z-index: 5;
   position: absolute;
   top: 27.5vh;
-  left: 12vw;
+  left: 12vmax;
   width: 45vh;
   height: auto;
   -webkit-animation-play-state: paused;
@@ -123,9 +123,9 @@ a, a:visited {
   transition: 1s;
 }
 
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
+@media only screen and (min-height: 600px) and (max-width: 1120px) {
   .block-pate-grad {
-    left: 15%;
+    left: 9vh;
   }
 }
 
@@ -228,7 +228,7 @@ a, a:visited {
           filter: sepia(60%) contrast(110%);
 }
 
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
+@media only screen and (min-height: 600px) and (max-width: 1120px) {
   #duck {
     left: 30%;
   }
@@ -249,7 +249,7 @@ a, a:visited {
           filter: sepia(60%) contrast(110%);
 }
 
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
+@media only screen and (min-height: 600px) and (max-width: 1120px) {
   #horse {
     left: 15%;
   }
@@ -258,17 +258,17 @@ a, a:visited {
 #octopus {
   z-index: -1;
   position: absolute;
-  top: -10vh;
-  right: -25vh;
-  width: 60vh;
+  top: -15vh;
+  right: -18vh;
+  width: 50vh;
   height: auto;
-  -webkit-filter: sepia(60%) contrast(110%) brightness(60%);
-          filter: sepia(60%) contrast(110%) brightness(60%);
+  -webkit-filter: sepia(60%) brightness(60%);
+          filter: sepia(60%) brightness(60%);
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
 }
 
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
+@media only screen and (min-height: 600px) and (max-width: 1120px) {
   #octopus {
     right: -25vh;
   }

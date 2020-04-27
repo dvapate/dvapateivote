@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@0;1&display=swap");
 body, html {
   height: 100vh;
   position: relative;
   display: block;
   font-family: "Cormorant Garamond", sans-serif;
   color: #DCDCDC;
-  background: #111;
+  background: black;
   margin: 0;
   overflow: hidden;
 }
@@ -14,6 +13,8 @@ body, html {
 a, a:visited {
   color: #eee;
   text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .block-photo {
@@ -52,16 +53,16 @@ a, a:visited {
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   .block-info-text {
     padding: 5vh;
-    padding-left: 5vw;
+    padding-left: 2vw;
   }
 }
 
 .cication {
-  text-align: left;
+  text-align: center;
   padding: 3vh;
   font-size: 3vh;
   line-height: 140%;
-  background-color: black;
+  background-color: #111;
   border-bottom: solid 5px #DCDCDC;
   border-right: solid 5px #DCDCDC;
   border-left: solid 5px #acacac;
@@ -82,25 +83,32 @@ a, a:visited {
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   .wait {
     text-align: right;
-    font-size: 5.5vh;
+    font-size: 5vh;
     padding-left: 0vh;
   }
 }
 
 .contacts {
-  font-family: "Old Standard TT", serif;
+  display: block;
+  position: absolute;
+  bottom: 5vh;
+  right: 10vh;
   text-align: right;
   list-style-type: none;
 }
 
+.contacts a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: lightskyblue;
+  padding: 10px;
+}
+
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   .contacts {
-    font-size: 4vh;
+    font-size: 5vh;
     text-align: right;
     padding: 0px;
-    padding-bottom: 1vh;
-    padding-right: 1vh;
-    padding-left: 5vh;
   }
 }
 
@@ -109,57 +117,80 @@ a, a:visited {
     padding: 10px;
     padding-top: 5vh;
     padding-left: 10vw;
-    font-size: 3vh;
-    bottom: 0;
-  }
-}
-
-li {
-  padding-top: 1.5vh;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  li {
-    padding: 2vh;
-    display: inline;
-    margin: 0 auto;
+    font-size: 2.5vh;
   }
 }
 
 .image {
   position: absolute;
   z-index: -1;
-  left: 0;
+  left: -20vh;
   bottom: -20vh;
-  width: 30%;
+  width: 70vh;
   height: auto;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  -webkit-transform: rotate(210deg);
+          transform: rotate(210deg);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-animation: chrome 15s linear infinite;
+          animation: chrome 15s linear infinite;
 }
 
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   .image {
-    display: none;
+    width: 70vh;
   }
 }
 
-#mobile {
-  color: #DCDCDC;
+@-webkit-keyframes chrome {
+  0% {
+    -webkit-filter: sepia(80%) hue-rotate(0deg) brightness(10%);
+            filter: sepia(80%) hue-rotate(0deg) brightness(10%);
+  }
+  50% {
+    -webkit-filter: sepia(80%) hue-rotate(359deg) brightness(25%);
+            filter: sepia(80%) hue-rotate(359deg) brightness(25%);
+  }
+  100% {
+    -webkit-filter: sepia(80%) hue-rotate(0deg) brightness(10%);
+            filter: sepia(80%) hue-rotate(0deg) brightness(10%);
+  }
 }
 
-#telegram {
-  color: #DCDCDC;
+@keyframes chrome {
+  0% {
+    -webkit-filter: sepia(80%) hue-rotate(0deg) brightness(10%);
+            filter: sepia(80%) hue-rotate(0deg) brightness(10%);
+  }
+  50% {
+    -webkit-filter: sepia(80%) hue-rotate(359deg) brightness(25%);
+            filter: sepia(80%) hue-rotate(359deg) brightness(25%);
+  }
+  100% {
+    -webkit-filter: sepia(80%) hue-rotate(0deg) brightness(10%);
+            filter: sepia(80%) hue-rotate(0deg) brightness(10%);
+  }
+}
+
+#mobile:hover {
+  color: #ffe7bb;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#telegram:hover {
+  color: #ffe7bb;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .back {
   font-family: 'Cormorant Garamond', serif;
   font-size: 3.5vh;
   text-align: left;
-  color: #eee;
+  color: #ffe7bb;
   padding-top: 3vh;
   padding-left: 5vw;
 }
@@ -167,6 +198,10 @@ li {
 .back a, .back a:visited {
   color: #eee;
   text-decoration: none;
+}
+
+.back a:hover {
+  color: #ffe7bb;
 }
 
 @media only screen and (max-height: 600px) and (max-width: 900px) {

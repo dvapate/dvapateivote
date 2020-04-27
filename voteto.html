@@ -1,152 +1,170 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/cover.css">
-    <link rel="stylesheet" href="style/voteto.css">
-    <title>Два паштета и вот это</title>
-    
-    <script>
-      $(window).on('load', function(){
-          $('#cover').fadeOut(1000);
-          $("#img1").fadeIn("slow");
-          })
-        var count = 1;
-        $(document).ready(function(){
-          $("#button2").click(function(){
-            $("#img" + count).hide();
-            count++;
-            if (count > 7)
-          count = 1;
-            $("#img" + count).fadeIn("slow");
-          });
-          $("#button1").click(function(){
-            $("#img" + count).hide();
-            count--;
-            if (count < 1)
-          count = 7;
-            $("#img" + count).fadeIn("slow");
-          });
-        });
-    </script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/cover.css">
+  <link rel="stylesheet" href="style/voteto.css">
+
+  <title>Два паштета и вот это</title>
 
 </head>
+
 <body>
   <div id="cover"></div>
   <div id="rotate">
     <div id="rotate-text">Поверни меня!</div>
-    <img src="media/octopus.png" alt="" id="octo-rot1">
-    <img src="media/octopus.png" alt="" id="octo-rot2">
-    <img src="media/octopus.png" alt="" id="octo-rot3">
+    <img src="media/octopus_front.svg" alt="" id="octo-rot1">
+    <img src="media/octopus_rotate_small.svg" alt="" id="octo-rot2">
+    <img src="media/octopus_rotate_small.svg" alt="" id="octo-rot3">
   </div>
-  
+
   <div class="back">
     <a href="index.html">
-    Назад
+      Назад
     </a>
   </div>
 
-    <div id="button1">
-      <img src="media/voteto/left.png" alt="">
-    </div>
-    
-    <div id="img1" class="gallery">
-        <div class="text-vert">
-        Подкопчёная утиная грудка
-        <div class="text-vert-small">
-        сычуаньский перец, ажван
-        </div>
-        </div>
-        <img src="media/voteto/duck1.svg" class="image" >
-        <img src="media/duck.png" id="duck01" class="sepia">
-        <img src="media/duck.png" id="duck02" class="sepia">
-    </div>
-    
-    <div id="img2" class="gallery">
-        <div class="text-vert">
-        Подкопчёная утиная грудка
-        <div class="text-vert-small">
-        чёрный чай
-        </div>
-        </div>
-        <img src="media/voteto/duck2.svg" alt="" class="image">
-        <img src="media/duck.png" id="duck04" class="sepia">
-        <img src="media/duck.png" id="duck03" class="sepia">
-    </div>
-    
-    <div id="img3" class="gallery">
-        <div class="text-vert">
-        Гравлакс
-        <div class="text-vert-small">
-        слабосолёный лосось с укропом
-        </div>
-        </div>
-        <img src="media/voteto/salmon1.svg" alt="" class="image">
-        <img src="media/voteto/salmon_small.png" id="salmon01" class="sepia">
-        <img src="media/voteto/salmon_small.png" id="salmon02" class="sepia">
-    </div>
-    
-    <div id="img4" class="gallery">
-        <div class="text-vert">
-        Джерки
-        <div class="text-vert-small">
-        индейка, копчение, торфяной виски
-        </div>
-        </div>
-        <img src="media/voteto/jerky2.svg" alt="" class="image">
-        <img src="media/voteto/turkey_jerks.svg" id="jerks01" class="sepia">
-    </div>
-    
-    <div id="img5" class="gallery">
-        <div class="text-vert">
-        Нога перепела копчёная в опилках
-        <div class="text-vert-small">
-        </div>
-        </div>
-        <img src="media/voteto/leg1.svg" alt="" class="image">
-        <img src="media/voteto/quail_tt.png" id="quail01" class="sepia">
-        <img src="media/voteto/quail_tt.png" id="quail02" class="sepia">
-    </div>
-    
-    <div id="img6" class="gallery">
-        <div class="text-vert">
-        Креветки
-        <div class="text-vert-small">
-        маринованные с розовым перцем
-        </div>
-        </div>
-        <img src="media/voteto/prawn1.svg" alt="" class="image">
-        <img src="media/voteto/prawn_tt.svg" id="prawn01" class="sepia">
-    </div>
-    
-    <div id="img7" class="gallery">
-        <div class="text-bottom">
-        Гребешок
-        <div class="text-vert-small">
-        </div>
-        </div>
-        <img src="media/voteto/scallop1.svg" alt="" class="image">
-        <img src="media/voteto/fedya.png" id="fedya01" class="sepia">
-        <img src="media/voteto/fedya.png" id="fedya02" class="sepia">
-    </div>
-    
-    <div id="button2">
-      <img src="media/voteto/right.png" alt="" class="image">
-    </div>
+  <div id="button1">
+    <img src="media/voteto/left.png" alt="" class="sepia">
+  </div>
 
-    <div class="contacts">
-      <a href="contacts.html">
-        Контакты
-      </a>
+  <div id="img1" class="gallery">
+    <div class="text-vert">
+      Подкопчёная утиная грудка
+      <div class="text-vert-small">
+        сычуаньский перец, ажван
+      </div>
     </div>
+    <img src="media/voteto/duck1.svg" class="image">
+    <img src="media/duck.png" id="duck01" class="sepia">
+    <img src="media/duck.png" id="duck02" class="sepia">
+  </div>
+
+  <div id="img2" class="gallery">
+    <div class="text-vert">
+      Подкопчёная утиная грудка
+      <div class="text-vert-small">
+        чёрный чай
+      </div>
+    </div>
+    <img src="media/voteto/duck2.svg" alt="" class="image">
+    <img src="media/duck.png" id="duck04" class="sepia">
+    <img src="media/duck.png" id="duck03" class="sepia">
+  </div>
+
+  <div id="img3" class="gallery">
+    <div class="text-vert">
+      Гравлакс
+      <div class="text-vert-small">
+        слабосолёный лосось с укропом
+      </div>
+    </div>
+    <img src="media/voteto/salmon1.svg" alt="" class="image">
+    <img src="media/voteto/salmon_small.png" id="salmon01" class="sepia">
+    <img src="media/voteto/salmon_small.png" id="salmon02" class="sepia">
+  </div>
+
+  <div id="img4" class="gallery">
+    <div class="text-vert">
+      Джерки
+      <div class="text-vert-small">
+        индейка, копчение, торфяной виски
+      </div>
+    </div>
+    <img src="media/voteto/jerky2.svg" alt="" class="image">
+    <img src="media/voteto/turkey_jerks.svg" id="jerks01" class="sepia">
+  </div>
+
+  <div id="img5" class="gallery">
+    <div class="text-vert">
+      Нога перепела копчёная в опилках
+      <div class="text-vert-small">
+      </div>
+    </div>
+    <img src="media/voteto/leg1.svg" alt="" class="image">
+    <img src="media/voteto/quail_tt.png" id="quail01" class="sepia">
+    <img src="media/voteto/quail_tt.png" id="quail02" class="sepia">
+  </div>
+
+  <div id="img6" class="gallery">
+    <div class="text-vert">
+      Креветки
+      <div class="text-vert-small">
+        маринованные с розовым перцем
+      </div>
+    </div>
+    <img src="media/voteto/prawn1.svg" alt="" class="image">
+    <img src="media/voteto/prawn_tt.svg" id="prawn01" class="sepia">
+  </div>
+
+  <div id="img7" class="gallery">
+    <div class="text-bottom">
+      Гребешок
+      <div class="text-vert-small">
+      </div>
+    </div>
+    <img src="media/voteto/scallop1.svg" alt="" class="image">
+    <img src="media/voteto/fedya.png" id="fedya01" class="sepia">
+    <img src="media/voteto/fedya.png" id="fedya02" class="sepia">
+  </div>
+
+  <div id="button2">
+    <img src="media/voteto/right.png" alt="" class="sepia">
+  </div>
+
+  <div class="contacts">
+    <a href="contacts.html">
+      Контакты
+    </a>
+  </div>
+  <script>
+    // Хороший способ дождаться прорисовки интерфейса
+    window.addEventListener("orientationchange", function () {
+
+      var originalBodyStyle = getComputedStyle(document.body).getPropertyValue('display');
+
+      document.body.style.display = 'none';
+
+      setTimeout(function () {
+        document.body.style.display = originalBodyStyle;
+      }, 10);
+    });
+
+    $(window).on('load', function () {
+      $('#cover').fadeOut(500);
+      $("#img1").fadeIn("slow");
+    })
+    var count = 1;
+    $(document).ready(function () {
+      $("#button2").click(function () {
+        $("#img" + count).hide();
+        count++;
+        if (count > 7)
+          count = 1;
+        $("#img" + count).fadeIn("slow");
+      });
+      $("#button1").click(function () {
+        $("#img" + count).hide();
+        count--;
+        if (count < 1)
+          count = 7;
+        $("#img" + count).fadeIn("slow");
+      });
+    });
+  </script>
 </body>
+
 </html>
