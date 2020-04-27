@@ -95,6 +95,12 @@ body {
   }
 }
 
+@media only screen and (max-height: 600px) and (max-width: 900px) {
+  .table {
+    padding-left: 2vw;
+  }
+}
+
 .heading {
   text-align: center;
   vertical-align: middle;
@@ -182,6 +188,7 @@ th {
     width: 45vh;
     -webkit-animation: pulse-mob 1s linear infinite;
             animation: pulse-mob 1s linear infinite;
+    padding: 4vw;
   }
 }
 
@@ -517,7 +524,7 @@ div#button1:hover, div#button2:hover {
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   .back {
     font-size: 6vh;
-    padding-right: 2vw;
+    padding-left: 2vw;
   }
 }
 

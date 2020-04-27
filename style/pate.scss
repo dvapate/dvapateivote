@@ -83,7 +83,10 @@ body {
   padding-top: 5vh;
   @include tablet {
     padding-top: 10vh;
-	}
+  }
+  @include mobile {
+    padding-left: 2vw;
+  }
 }
 
 .heading {
@@ -149,6 +152,7 @@ th {
   @include mobile {
     width: 45vh;
     animation: pulse-mob 1s linear infinite;
+    padding: 4vw;
   }
   @include tablet {
     width: 35vh;
@@ -302,7 +306,7 @@ div#button1:hover,div#button2:hover {
 	}
   @include mobile {
     font-size: 6vh;
-    padding-right: 2vw;
+    padding-left: 2vw;
 	}
 }
 
