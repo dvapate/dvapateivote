@@ -155,7 +155,7 @@ a, a:visited {
 .block-voteto:hover {
 	z-index: 1;
 	cursor: pointer;
-	filter: brightness(110%);
+	filter: sepia(80%);
 	transition: 0.5s;
 }
 
@@ -168,7 +168,7 @@ a, a:visited {
 	height: auto;
 	animation: shake 0.25s linear infinite alternate-reverse;
 	animation-play-state: paused;
-	filter: sepia(60%) contrast(110%);
+	filter: sepia(60%);
 	@include tablet {
 		left: 30%;
 	}
@@ -183,7 +183,7 @@ a, a:visited {
 	height: auto;
 	animation: shake 0.3s linear infinite;
 	animation-play-state: paused;
-	filter: sepia(60%) contrast(110%);
+	filter: sepia(60%);
 	@include tablet {
 		left: 15%;
 	}

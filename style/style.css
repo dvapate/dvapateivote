@@ -208,8 +208,8 @@ a, a:visited {
 .block-voteto:hover {
   z-index: 1;
   cursor: pointer;
-  -webkit-filter: brightness(110%);
-          filter: brightness(110%);
+  -webkit-filter: sepia(80%);
+          filter: sepia(80%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -224,8 +224,8 @@ a, a:visited {
   animation: shake 0.25s linear infinite alternate-reverse;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
-  -webkit-filter: sepia(60%) contrast(110%);
-          filter: sepia(60%) contrast(110%);
+  -webkit-filter: sepia(60%);
+          filter: sepia(60%);
 }
 
 @media only screen and (min-height: 600px) and (max-width: 1120px) {
@@ -245,8 +245,8 @@ a, a:visited {
           animation: shake 0.3s linear infinite;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
-  -webkit-filter: sepia(60%) contrast(110%);
-          filter: sepia(60%) contrast(110%);
+  -webkit-filter: sepia(60%);
+          filter: sepia(60%);
 }
 
 @media only screen and (min-height: 600px) and (max-width: 1120px) {
