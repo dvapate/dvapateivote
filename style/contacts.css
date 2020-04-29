@@ -7,15 +7,12 @@ body, html {
   color: #DCDCDC;
   background: black;
   margin: 0;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 a, a:visited {
   color: #eee;
   text-decoration: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
+  transition: 0.3s; }
 
 .block-photo {
   position: absolute;
@@ -23,39 +20,29 @@ a, a:visited {
   width: 50vw;
   left: 50vw;
   height: 100vh;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   background: url("../media/work.jpg") no-repeat;
   background-size: cover;
-  background-position: right;
-}
+  background-position: right; }
 
 .block-info {
   position: absolute;
   z-index: 1;
   width: 50vw;
-  height: 100vh;
-}
+  height: 100vh; }
 
 .block-info-text {
   position: relative;
   z-index: 5;
   font-size: 24px;
-  padding: 5vw;
-}
-
-@media (min-height: 600px) and (min-width: 901px) {
-  .block-info-text {
-    font-size: 36px;
-  }
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  .block-info-text {
-    padding: 5vh;
-    padding-left: 2vw;
-  }
-}
+  padding: 5vw; }
+  @media (min-height: 600px) and (min-width: 901px) {
+    .block-info-text {
+      font-size: 36px; } }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    .block-info-text {
+      padding: 5vh;
+      padding-left: 2vw; } }
 
 .cication {
   text-align: center;
@@ -63,30 +50,22 @@ a, a:visited {
   font-size: 3vh;
   line-height: 140%;
   background-color: #111;
-  border-bottom: solid 5px #DCDCDC;
-  border-right: solid 5px #DCDCDC;
-  border-left: solid 5px #acacac;
-  border-top: solid 5px #acacac;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  .cication {
-    font-size: 5vh;
-  }
-}
+  border-right: solid 2px #DCDCDC;
+  border-left: solid 2px #acacac;
+  border-radius: 10px; }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    .cication {
+      font-size: 5vh;
+      padding: 2vh; } }
 
 .wait {
   font-size: 3.5vh;
-  text-align: right;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  .wait {
-    text-align: right;
-    font-size: 5vh;
-    padding-left: 0vh;
-  }
-}
+  text-align: right; }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    .wait {
+      text-align: right;
+      font-size: 5vh;
+      padding-left: 0vh; } }
 
 .contacts {
   display: block;
@@ -94,32 +73,22 @@ a, a:visited {
   bottom: 5vh;
   right: 10vh;
   text-align: right;
-  list-style-type: none;
-}
-
-.contacts a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: lightskyblue;
-  padding: 10px;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  .contacts {
-    font-size: 5vh;
-    text-align: right;
-    padding: 0px;
-  }
-}
-
-@media (min-height: 600px) and (min-width: 901px) {
-  .contacts {
-    padding: 10px;
-    padding-top: 5vh;
-    padding-left: 10vw;
-    font-size: 2.5vh;
-  }
-}
+  list-style-type: none; }
+  .contacts a {
+    box-sizing: border-box;
+    color: lightskyblue;
+    padding: 10px; }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    .contacts {
+      font-size: 5vh;
+      text-align: right;
+      padding: 0px; } }
+  @media (min-height: 600px) and (min-width: 901px) {
+    .contacts {
+      padding: 10px;
+      padding-top: 5vh;
+      padding-left: 10vw;
+      font-size: 2.5vh; } }
 
 .image {
   position: absolute;
@@ -128,63 +97,27 @@ a, a:visited {
   bottom: -20vh;
   width: 70vh;
   height: auto;
-  -webkit-transform: rotate(210deg);
-          transform: rotate(210deg);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-animation: chrome 15s linear infinite;
-          animation: chrome 15s linear infinite;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  .image {
-    width: 70vh;
-  }
-}
-
-@-webkit-keyframes chrome {
-  0% {
-    -webkit-filter: sepia(80%) hue-rotate(0deg) brightness(10%);
-            filter: sepia(80%) hue-rotate(0deg) brightness(10%);
-  }
-  50% {
-    -webkit-filter: sepia(80%) hue-rotate(359deg) brightness(25%);
-            filter: sepia(80%) hue-rotate(359deg) brightness(25%);
-  }
-  100% {
-    -webkit-filter: sepia(80%) hue-rotate(0deg) brightness(10%);
-            filter: sepia(80%) hue-rotate(0deg) brightness(10%);
-  }
-}
+  transform: rotate(210deg);
+  user-select: none;
+  animation: chrome 15s linear infinite; }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    .image {
+      width: 70vh; } }
 
 @keyframes chrome {
   0% {
-    -webkit-filter: sepia(80%) hue-rotate(0deg) brightness(10%);
-            filter: sepia(80%) hue-rotate(0deg) brightness(10%);
-  }
+    filter: sepia(80%) hue-rotate(0deg) brightness(10%); }
   50% {
-    -webkit-filter: sepia(80%) hue-rotate(359deg) brightness(25%);
-            filter: sepia(80%) hue-rotate(359deg) brightness(25%);
-  }
+    filter: sepia(80%) hue-rotate(359deg) brightness(25%); }
   100% {
-    -webkit-filter: sepia(80%) hue-rotate(0deg) brightness(10%);
-            filter: sepia(80%) hue-rotate(0deg) brightness(10%);
-  }
-}
-
+    filter: sepia(80%) hue-rotate(0deg) brightness(10%); } }
 #mobile:hover {
   color: #ffe7bb;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
+  transition: 0.3s; }
 
 #email:hover {
   color: #ffe7bb;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
+  transition: 0.3s; }
 
 .back {
   font-family: 'Cormorant Garamond', serif;
@@ -192,22 +125,15 @@ a, a:visited {
   text-align: left;
   color: #ffe7bb;
   padding-top: 3vh;
-  padding-left: 5vw;
-}
+  padding-left: 5vw; }
+  .back a, .back a:visited {
+    color: #eee;
+    text-decoration: none; }
+  .back a:hover {
+    color: #ffe7bb; }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    .back {
+      font-size: 6vh;
+      padding-left: 2vw; } }
 
-.back a, .back a:visited {
-  color: #eee;
-  text-decoration: none;
-}
-
-.back a:hover {
-  color: #ffe7bb;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  .back {
-    font-size: 6vh;
-    padding-left: 2vw;
-  }
-}
 /*# sourceMappingURL=contacts.css.map */

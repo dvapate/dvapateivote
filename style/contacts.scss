@@ -69,12 +69,14 @@ a, a:visited {
 	font-size: 3vh;
 	line-height: 140%;
 	background-color: $dark;
-	border-bottom: solid 5px $pale;
-	border-right: solid 5px $pale;
-	border-left: solid 5px $grey;
-	border-top: solid 5px $grey;
+	//border-bottom: solid 2px $pale;
+	border-right: solid 2px $pale;
+	border-left: solid 2px $grey;
+	//border-top: solid 5px $grey;
+	border-radius: 10px;
 	@include mobile {
 		font-size: 5vh;
+		padding: 2vh;
 	}
 }
 

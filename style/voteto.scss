@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 
 $link:						#ffe7bb;
+@mixin too-small {
+	@media only screen and (max-height: 330px) { @content; }
+}
 
 @mixin mobile {
 	@media only screen and (max-height: 600px) and (max-width: 900px) { @content; }
@@ -29,11 +32,15 @@ body {
 	background: #000;
 	overflow: hidden;
 	display: grid;
-  grid-template-columns: auto 62.5vw auto;
+  	grid-template-columns: 18.75vw 62.5vw 18.75vw;
+  @include too-small {
+    grid-template-columns: 25vw 50vw 25vw;
+  }
   @include tablet {
     grid-template-columns: 12.5vw 75vw 12.5vw;
   }
 
+  
 }
 
 a, a:visited {
@@ -42,12 +49,15 @@ a, a:visited {
 
 .gallery {
   position: relative;
-	display: grid;
+  display: grid;
   grid-column: 2;
   margin: 0 auto;
   height: 100vh;
   width: 62.5vw;
   display: none;
+  @include too-small {
+	width: 50vw;
+  }
   @include tablet {
     width: 75vw;
   }
@@ -60,8 +70,9 @@ a, a:visited {
     left: 0;
     bottom: 0;
     width: 100%;
-    min-height: 40vh;
-    user-select: none;   
+    min-height: 30vh;
+    user-select: none;
+   
   }
 }
 
@@ -88,6 +99,8 @@ a, a:visited {
 .sepia {
   filter: brightness(80%) sepia(90%);
 }
+
+
 
 #duck01 {
   position: absolute;
@@ -125,6 +138,12 @@ a, a:visited {
   transform: scaleX(-1) rotate(160deg);
 }
 
+#duck01, #duck02, #duck03, #duck04 {
+  @include too-small {
+    width: 15vw;
+  }
+}
+
 #salmon01 {
   position: absolute;
   z-index: -1;
@@ -151,6 +170,12 @@ a, a:visited {
   }
 }
 
+#salmon01, #salmon02 {
+  @include too-small {
+    width: 30vw;
+  }
+}
+
 #jerks01 {
   position: absolute;
   z-index: -1;
@@ -160,6 +185,10 @@ a, a:visited {
   @include mobile {
     left: 0vw;
     bottom: 15vh;
+  }
+  @include too-small {
+    width: 22vw;
+    bottom: 17vh;
   }
 }
 
@@ -174,6 +203,9 @@ a, a:visited {
   @include tablet {
     bottom: 55vh;
 	}
+  @include too-small {
+    width: 13vw;
+  }
 }
 
 #quail02 {
@@ -186,6 +218,9 @@ a, a:visited {
   @include tablet {
     bottom: 45vh;
 	}
+   @include too-small {
+    width: 21vw;
+  }
 }
 
 #prawn01 {
@@ -227,6 +262,8 @@ a, a:visited {
     left: 5vw;
 	}
 }
+
+
 
 .text-vert, .text-vert-small, .text-bottom {
 	margin-top: 3vh;

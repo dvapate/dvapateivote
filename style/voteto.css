@@ -2,95 +2,70 @@
 html, body {
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 body {
   position: relative;
   background: #000;
   overflow: hidden;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 62.5vw auto;
-      grid-template-columns: auto 62.5vw auto;
-}
-
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
-  body {
-    -ms-grid-columns: 12.5vw 75vw 12.5vw;
-        grid-template-columns: 12.5vw 75vw 12.5vw;
-  }
-}
+  grid-template-columns: 18.75vw 62.5vw 18.75vw; }
+  @media only screen and (max-height: 330px) {
+    body {
+      grid-template-columns: 25vw 50vw 25vw; } }
+  @media only screen and (min-height: 600px) and (max-width: 1380px) {
+    body {
+      grid-template-columns: 12.5vw 75vw 12.5vw; } }
 
 a, a:visited {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
+  transition: 0.3s; }
 
 .gallery {
   position: relative;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-column: 2;
   grid-column: 2;
   margin: 0 auto;
   height: 100vh;
   width: 62.5vw;
-  display: none;
-}
-
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
-  .gallery {
-    width: 75vw;
-  }
-}
+  display: none; }
+  @media only screen and (max-height: 330px) {
+    .gallery {
+      width: 50vw; } }
+  @media only screen and (min-height: 600px) and (max-width: 1380px) {
+    .gallery {
+      width: 75vw; } }
 
 #img1 .image, #img2 .image, #img3 .image, #img4 .image, #img5 .image, #img6 .image, #img7 .image {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  min-height: 40vh;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
+  min-height: 30vh;
+  user-select: none; }
 
 #img5 .image {
-  bottom: -5vh;
-}
+  bottom: -5vh; }
 
 #img7 .image {
   top: 0;
   left: 5vw;
-  width: 80%;
-}
-
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
-  #img7 .image {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  #img7 .image {
-    width: 90%;
-  }
-}
+  width: 80%; }
+  @media only screen and (min-height: 600px) and (max-width: 1380px) {
+    #img7 .image {
+      width: 90%; } }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    #img7 .image {
+      width: 90%; } }
 
 .sepia {
-  -webkit-filter: brightness(80%) sepia(90%);
-          filter: brightness(80%) sepia(90%);
-}
+  filter: brightness(80%) sepia(90%); }
 
 #duck01 {
   position: absolute;
   z-index: -1;
   width: 20vw;
   right: 5vw;
-  bottom: 35vh;
-}
+  bottom: 35vh; }
 
 #duck02 {
   position: absolute;
@@ -98,21 +73,16 @@ a, a:visited {
   width: 20vw;
   left: 5vw;
   bottom: 32vh;
-  -webkit-transform: rotate(160deg);
-          transform: rotate(160deg);
-  -webkit-filter: sepia(200%);
-          filter: sepia(200%);
-}
+  transform: rotate(160deg);
+  filter: sepia(200%); }
 
 #duck03 {
   position: absolute;
   z-index: -1;
   width: 20vw;
   left: 5vw;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-  bottom: 35vh;
-}
+  transform: scaleX(-1);
+  bottom: 35vh; }
 
 #duck04 {
   position: absolute;
@@ -120,9 +90,11 @@ a, a:visited {
   width: 20vw;
   right: 5vw;
   bottom: 32vh;
-  -webkit-transform: scaleX(-1) rotate(160deg);
-          transform: scaleX(-1) rotate(160deg);
-}
+  transform: scaleX(-1) rotate(160deg); }
+
+@media only screen and (max-height: 330px) {
+  #duck01, #duck02, #duck03, #duck04 {
+    width: 15vw; } }
 
 #salmon01 {
   position: absolute;
@@ -130,16 +102,11 @@ a, a:visited {
   width: 50vw;
   left: 0vw;
   bottom: 15vw;
-  -webkit-transform: scaleX(-1) rotate(-45deg);
-          transform: scaleX(-1) rotate(-45deg);
-}
-
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
-  #salmon01 {
-    left: 0vw;
-    bottom: 20vw;
-  }
-}
+  transform: scaleX(-1) rotate(-45deg); }
+  @media only screen and (min-height: 600px) and (max-width: 1380px) {
+    #salmon01 {
+      left: 0vw;
+      bottom: 20vw; } }
 
 #salmon02 {
   position: absolute;
@@ -147,31 +114,30 @@ a, a:visited {
   width: 40vw;
   right: 0vw;
   bottom: 20vw;
-  -webkit-transform: scaleX(-1) rotate(45deg);
-          transform: scaleX(-1) rotate(45deg);
-}
+  transform: scaleX(-1) rotate(45deg); }
+  @media only screen and (min-height: 600px) and (max-width: 1380px) {
+    #salmon02 {
+      right: 0vw;
+      bottom: 25vw; } }
 
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
-  #salmon02 {
-    right: 0vw;
-    bottom: 25vw;
-  }
-}
+@media only screen and (max-height: 330px) {
+  #salmon01, #salmon02 {
+    width: 30vw; } }
 
 #jerks01 {
   position: absolute;
   z-index: -1;
   width: 30vw;
   left: 5vw;
-  bottom: 20vh;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  #jerks01 {
-    left: 0vw;
-    bottom: 15vh;
-  }
-}
+  bottom: 20vh; }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    #jerks01 {
+      left: 0vw;
+      bottom: 15vh; } }
+  @media only screen and (max-height: 330px) {
+    #jerks01 {
+      width: 22vw;
+      bottom: 17vh; } }
 
 #quail01 {
   position: absolute;
@@ -179,17 +145,14 @@ a, a:visited {
   width: 15vw;
   right: 10vw;
   bottom: 55vh;
-  -webkit-transform: scaleX(-1) rotate(-10deg);
-          transform: scaleX(-1) rotate(-10deg);
-  -webkit-filter: blur(1px) sepia(80%);
-          filter: blur(1px) sepia(80%);
-}
-
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
-  #quail01 {
-    bottom: 55vh;
-  }
-}
+  transform: scaleX(-1) rotate(-10deg);
+  filter: blur(1px) sepia(80%); }
+  @media only screen and (min-height: 600px) and (max-width: 1380px) {
+    #quail01 {
+      bottom: 55vh; } }
+  @media only screen and (max-height: 330px) {
+    #quail01 {
+      width: 13vw; } }
 
 #quail02 {
   position: absolute;
@@ -197,15 +160,13 @@ a, a:visited {
   width: 25vw;
   right: 9vw;
   bottom: 45vh;
-  -webkit-filter: blur(0.1px) sepia(80%);
-          filter: blur(0.1px) sepia(80%);
-}
-
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
-  #quail02 {
-    bottom: 45vh;
-  }
-}
+  filter: blur(0.1px) sepia(80%); }
+  @media only screen and (min-height: 600px) and (max-width: 1380px) {
+    #quail02 {
+      bottom: 45vh; } }
+  @media only screen and (max-height: 330px) {
+    #quail02 {
+      width: 21vw; } }
 
 #prawn01 {
   position: absolute;
@@ -213,22 +174,14 @@ a, a:visited {
   width: 25vw;
   left: -1vw;
   bottom: 30vh;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
-}
-
-@media (min-height: 700px) {
-  #prawn01 {
-    bottom: 29vh;
-  }
-}
-
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
-  #prawn01 {
-    left: 10vw;
-    bottom: 39vh;
-  }
-}
+  transform: rotate(20deg); }
+  @media (min-height: 700px) {
+    #prawn01 {
+      bottom: 29vh; } }
+  @media only screen and (min-height: 600px) and (max-width: 1380px) {
+    #prawn01 {
+      left: 10vw;
+      bottom: 39vh; } }
 
 #fedya01 {
   position: absolute;
@@ -236,15 +189,10 @@ a, a:visited {
   width: 8vw;
   right: 15vw;
   bottom: 15vh;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  #fedya01 {
-    right: 5vw;
-  }
-}
+  transform: rotate(0deg); }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    #fedya01 {
+      right: 5vw; } }
 
 #fedya02 {
   position: absolute;
@@ -252,50 +200,33 @@ a, a:visited {
   width: 15vw;
   left: 10vw;
   bottom: 7vh;
-  -webkit-transform: scaleX(-1) rotate(-5deg);
-          transform: scaleX(-1) rotate(-5deg);
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  #fedya02 {
-    left: 5vw;
-  }
-}
+  transform: scaleX(-1) rotate(-5deg); }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    #fedya02 {
+      left: 5vw; } }
 
 .text-vert, .text-vert-small, .text-bottom {
   margin-top: 3vh;
   font-family: 'Cormorant Garamond', serif;
   font-size: 5vh;
   text-align: center;
-  color: #eee;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  .text-vert, .text-vert-small, .text-bottom {
-    font-size: 7vh;
-  }
-}
+  color: #eee; }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    .text-vert, .text-vert-small, .text-bottom {
+      font-size: 7vh; } }
 
 .text-vert-small {
   margin-top: 0vh;
-  font-size: 3.5vh;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  .text-vert-small {
-    font-size: 5vh;
-  }
-}
+  font-size: 3.5vh; }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    .text-vert-small {
+      font-size: 5vh; } }
 
 .text-bottom {
-  margin-top: 65vh;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  .text-bottom {
-    margin-top: 75vh;
-  }
-}
+  margin-top: 65vh; }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    .text-bottom {
+      margin-top: 75vh; } }
 
 div#button1 {
   position: absolute;
@@ -304,35 +235,21 @@ div#button1 {
   /*  background: rgba(255, 255, 255, 0.2); */
   top: 50%;
   left: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-div#button1 img {
-  position: absolute;
-  -webkit-filter: sepia(50%);
-          filter: sepia(50%);
-  width: 15vh;
-  margin-right: 1vw;
-  margin-left: 2vw;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
+  transition: 1s; }
   div#button1 img {
-    width: 20vh;
-  }
-}
-
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
-  div#button1 img {
-    margin-left: 0.5vw;
-  }
-}
+    position: absolute;
+    filter: sepia(50%);
+    width: 15vh;
+    margin-right: 1vw;
+    margin-left: 2vw;
+    cursor: pointer;
+    user-select: none; }
+    @media only screen and (max-height: 600px) and (max-width: 900px) {
+      div#button1 img {
+        width: 20vh; } }
+    @media only screen and (min-height: 600px) and (max-width: 1380px) {
+      div#button1 img {
+        margin-left: 0.5vw; } }
 
 div#button2 {
   position: absolute;
@@ -341,92 +258,59 @@ div#button2 {
   /* background: rgba(255, 255, 255, 0.2); */
   top: 50%;
   right: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-div#button2 img {
-  position: absolute;
-  -webkit-filter: sepia(50%);
-          filter: sepia(50%);
-  width: 15vh;
-  margin-right: 2vw;
-  margin-left: 1vw;
-  right: 0;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
+  transition: 1s; }
   div#button2 img {
-    width: 20vh;
-  }
-}
-
-@media only screen and (min-height: 600px) and (max-width: 1380px) {
-  div#button2 img {
-    margin-right: 0.5vw;
-  }
-}
+    position: absolute;
+    filter: sepia(50%);
+    width: 15vh;
+    margin-right: 2vw;
+    margin-left: 1vw;
+    right: 0;
+    cursor: pointer;
+    user-select: none; }
+    @media only screen and (max-height: 600px) and (max-width: 900px) {
+      div#button2 img {
+        width: 20vh; } }
+    @media only screen and (min-height: 600px) and (max-width: 1380px) {
+      div#button2 img {
+        margin-right: 0.5vw; } }
 
 div#button1:hover, div#button2:hover {
   margin: 0 2vw;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
+  transition: 1s; }
 
 .back {
-  -ms-grid-column: 1;
   grid-column: 1;
   font-family: 'Cormorant Garamond', serif;
   font-size: 3.5vh;
   text-align: left;
   padding-top: 3vh;
-  padding-left: 5vw;
-}
-
-.back a, .back a:visited {
-  color: #eee;
-  text-decoration: none;
-}
-
-.back a:hover {
-  color: #ffe7bb;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  .back {
-    font-size: 6vh;
-    padding-left: 2vw;
-  }
-}
+  padding-left: 5vw; }
+  .back a, .back a:visited {
+    color: #eee;
+    text-decoration: none; }
+  .back a:hover {
+    color: #ffe7bb; }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    .back {
+      font-size: 6vh;
+      padding-left: 2vw; } }
 
 .contacts {
-  -ms-grid-column: 3;
   grid-column: 3;
   font-family: 'Cormorant Garamond', serif;
   font-size: 3.5vh;
   text-align: right;
   padding-top: 3vh;
-  padding-right: 5vw;
-}
+  padding-right: 5vw; }
+  .contacts a, .contacts a:visited {
+    color: #eee;
+    text-decoration: none; }
+  .contacts a:hover {
+    color: #ffe7bb; }
+  @media only screen and (max-height: 600px) and (max-width: 900px) {
+    .contacts {
+      font-size: 6vh;
+      padding-right: 2vw; } }
 
-.contacts a, .contacts a:visited {
-  color: #eee;
-  text-decoration: none;
-}
-
-.contacts a:hover {
-  color: #ffe7bb;
-}
-
-@media only screen and (max-height: 600px) and (max-width: 900px) {
-  .contacts {
-    font-size: 6vh;
-    padding-right: 2vw;
-  }
-}
 /*# sourceMappingURL=voteto.css.map */
