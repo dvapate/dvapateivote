@@ -27,6 +27,20 @@
 
     <div id="cover"></div>
 
+    <div id="secret_cover">
+        <div id="question"> 
+            Вам есть 18 лет?
+            <br>
+            <button id="no">
+                Нет
+            </button>
+            <button id="yes">
+                Да
+            </button>
+
+        </div>
+    </div>
+
     <div id="rotate">
         <div id="rotate-text">Поверни меня!</div>
         <img src="media/octopus_front.svg" alt="" id="octo-rot1">
@@ -36,9 +50,8 @@
 
     <!-- Pate block -->
 
-    <a href="pate.html">
-
         <div class="block-pate" id="shake">
+        <a href="pate.html">
             <div class="block-pate-text">ДВА ПАШТЕТА</div>
 
             <div class="block-pate-grad" id="pate1">
@@ -48,27 +61,49 @@
             <span class="block-i-text">
                 и
             </span>
+        </a>
         </div>
-
-    </a>
 
     <!-- VOTETO block -->
-    <a href="voteto.html">
-
+    
         <div class="block-voteto">
+            <a href="voteto.html">
             <div class="block-voteto-text">ВОТ ЭТО</div>
-
-            <img src="media/horse.png" alt="Конь" id="horse">
-            <img src="media/duck.png" alt="Утка" id="duck">
+                <img src="media/horse.png" alt="Конь" id="horse">
+                <img src="media/duck.png" alt="Утка" id="duck">
+             </a>
+            <img src="media/secret1.png" alt="***" id="secret1">
             <img src="media/octopus_front.svg" alt="Ктопус" id="octopus">
-        </div>
 
-    </a>
+            <img src="media/secret2.png" alt="Шупальце" id="secret2">
+        </div>
 
     <script>
         let horse = document.getElementById("horse");
         let duck = document.getElementById("duck");
         let pate = document.getElementById("pate1");
+        
+        let hours = new Date().getHours();
+
+        let yes = document.getElementById("yes");
+        let no = document.getElementById("no");
+        let octo = document.getElementById("octopus");
+
+        if ((hours >= 23) || (hours <= 8)) {
+            octo.style.zIndex = 10;
+            octo.onclick = function () {
+                $('#secret_cover').show();
+            };
+            yes.onclick = function () {
+                $('#secret_cover').fadeOut(500);
+                $('#secret1').show();
+                $('#secret2').show();
+                mouseOver(secret2, octo);
+            };
+            no.onclick = function () {
+                window.location = "https://bibleonline.ru/children/ibt/1/";
+            };
+        };
 
         duck.onmouseover = function () { mouseOver(duck, horse) };
         duck.onmouseout = function () { mouseOut(duck, horse) };
@@ -76,17 +111,23 @@
         horse.onmouseover = function () { mouseOver(duck, horse) };
         horse.onmouseout = function () { mouseOut(duck, horse) };
 
-        pate.onmouseover = function () { mouseOver(pate, 0) };
-        pate.onmouseout = function () { mouseOut(pate, 0) };
+        pate.onmouseover = function () { mouseOver(pate, null) };
+        pate.onmouseout = function () { mouseOut(pate, null) };
 
-        function mouseOver(thing, some) {
+        function mouseOver(thing, some)
+        {
             thing.style.webkitAnimationPlayState = "running";
+            if (some) {
             some.style.webkitAnimationPlayState = "running";
+            };
         }
 
-        function mouseOut(thing, some) {
+        function mouseOut(thing, some)
+        {
             thing.style.webkitAnimationPlayState = "paused";
+            if (some) {
             some.style.webkitAnimationPlayState = "paused";
+            };
         }
 
         $(window).on('load', function () {
@@ -94,17 +135,15 @@
         })
 
         // Хороший способ дождаться прорисовки интерфейса
-        window.addEventListener("orientationchange", function () {
-
+        window.addEventListener("orientationchange", function ()
+        {
             var originalBodyStyle = getComputedStyle(document.body).getPropertyValue('display');
 
             document.body.style.display = 'none';
-
             setTimeout(function () {
                 document.body.style.display = originalBodyStyle;
             }, 10);
         });
-
     </script>
 
 </body>
