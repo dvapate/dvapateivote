@@ -362,47 +362,47 @@ th {
   }
 }
 
-#td1, #td2, #td3, #td4 {
+#td1, #td2, #td3, #td4, #td5 {
   display: none;
 }
 
-#img1, #img2, #img3, #img4 {
+#img1, #img2, #img3, #img4, #img5 {
   position: relative;
   width: 100%;
   display: none;
 }
 
 @media (min-height: 900px) and (min-width: 1440px) {
-  #img1, #img2, #img3, #img4 {
+  #img1, #img2, #img3, #img4, #img5 {
     bottom: 0vh;
   }
 }
 
 @media (min-height: 700px) and (min-width: 1280px) {
-  #img1, #img2, #img3, #img4 {
+  #img1, #img2, #img3, #img4, #img5 {
     bottom: -10%;
   }
 }
 
 @media only screen and (min-height: 600px) and (max-width: 1200px) {
-  #img1, #img2, #img3, #img4 {
+  #img1, #img2, #img3, #img4, #img5 {
     bottom: -12vmax;
   }
 }
 
 @media only screen and (max-height: 600px) and (max-width: 900px) {
-  #img1, #img2, #img3, #img4 {
+  #img1, #img2, #img3, #img4, #img5 {
     bottom: -5vmin;
   }
 }
 
 @media only screen and (max-height: 400px) and (max-width: 900px) {
-  #img1, #img2, #img3, #img4 {
+  #img1, #img2, #img3, #img4, #img5 {
     bottom: -10vh;
   }
 }
 
-#img1 img, #img2 img, #img3 img, #img4 img {
+#img1 img, #img2 img, #img3 img, #img4 img, #img5 img {
   position: absolute;
   left: 0;
   bottom: 0;

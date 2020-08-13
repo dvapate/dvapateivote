@@ -152,6 +152,32 @@
             <td>90 суток, 0...+6 &#8451;, при влажности не более 75%</td>
           </tr>
         </table>
+
+        <table id="td5">
+          <tr>
+            <td colspan="2" class="heading">Паштет «Чёрная фасоль с ромом»</td>
+          </tr>
+          <tr>
+            <td>Состав</td>
+            <td>Фасоль чёрная, бульон (вода, фасоль), масло сливочное, лук белый, цедра лайма, ром тёмный, масло подсолнечное, сахар тростниковый, зира, кориандр, соль, сорбат калия, чеснок, кайенский перец, чёрный перец.
+            </td>
+          </tr>
+          <tr>
+            <td>Энергетическая ценность</td>
+            <td>Белки 6.1
+              Жиры 16.6
+              Углеводы 15.5
+              Калории 245</td>
+          </tr>
+          <tr>
+            <td>Масса нетто</td>
+            <td>110 гр.</td>
+          </tr>
+          <tr>
+            <td>Условия хранения</td>
+            <td>90 суток, 0...+6 &#8451;, при влажности не более 75%</td>
+          </tr>
+        </table>
       </div>
 
       <div class="img_wrapper">
@@ -163,6 +189,7 @@
         <img src="media/pate/chicken.svg" alt="Паштет «Куриная печень с абсентом»" id="img2">
         <img src="media/pate/skumbria.svg" alt="Паштет «Копчёной скумбрия с жжёным луком»" id="img3">
         <img src="media/pate/shrooms.svg" alt="Паштет «Грибы с водорослями»" id="img4">
+        <img src="media/pate/beans.svg" alt="Паштет «Чёрная фасоль с ромом»" id="img5">
 
         <div id="button2">
           <img src="media/pate/arr-right.svg" alt="Направо">
@@ -204,7 +231,7 @@
         $("#img" + count).hide();
         $("#td" + count).hide();
         count++;
-        if (count > 4)
+        if (count > 5)
           count = 1;
         $("#img" + count).fadeIn("slow");
         $("#td" + count).fadeIn("slow");
@@ -214,7 +241,7 @@
         $("#td" + count).hide();
         count--;
         if (count < 1)
-          count = 4;
+          count = 5;
         $("#img" + count).fadeIn("slow");
         $("#td" + count).fadeIn("slow");
       });
