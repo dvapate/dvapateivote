@@ -193,11 +193,11 @@ th {
   100% { background: radial-gradient(38vh 43vh, rgba(255, 255, 255, 0.9) 30%,  rgba(0, 0, 0, 0) 55%); }
 }
 
-#td1, #td2, #td3, #td4, #td5 {
+.table__pate {
   display: none;
 }
 
-#img1, #img2, #img3, #img4, #img5 {
+.image__pate {
   position: relative;
 	//max-width: 100vw; /* real image width */
   width: 100%;

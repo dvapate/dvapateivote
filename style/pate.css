@@ -11,7 +11,6 @@ body {
   background-size: cover;
   overflow: hidden;
 }
-
 @media only screen and (min-height: 600px) and (max-width: 1200px) {
   body {
     background-position: center;
@@ -22,79 +21,56 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: -webkit-gradient(linear, right top, left top, color-stop(8%, #000000), color-stop(18.25%, rgba(0, 0, 0, 0.78)), color-stop(27.08%, rgba(0, 0, 0, 0.09)), color-stop(56.25%, rgba(0, 0, 0, 0.78)), color-stop(74.48%, #000000));
   background: linear-gradient(270deg, #000000 8%, rgba(0, 0, 0, 0.78) 18.25%, rgba(0, 0, 0, 0.09) 27.08%, rgba(0, 0, 0, 0.78) 56.25%, #000000 74.48%);
   mix-blend-mode: normal;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 62.5vw auto;
-      grid-template-columns: auto 62.5vw auto;
-  -ms-grid-rows: 20vh auto;
-      grid-template-rows: 20vh auto;
+  grid-template-columns: auto 62.5vw auto;
+  grid-template-rows: 20vh auto;
 }
-
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   .gradient {
-    -ms-grid-rows: 10vh auto;
-        grid-template-rows: 10vh auto;
+    grid-template-rows: 10vh auto;
   }
 }
-
 @media only screen and (min-height: 600px) and (max-width: 1200px) {
   .gradient {
-    background: -webkit-gradient(linear, right top, left top, color-stop(8%, #000000), color-stop(18.25%, rgba(0, 0, 0, 0.78)), color-stop(27.08%, rgba(0, 0, 0, 0.09)), color-stop(56.25%, rgba(0, 0, 0, 0.9)), color-stop(60.48%, #000000));
     background: linear-gradient(270deg, #000000 8%, rgba(0, 0, 0, 0.78) 18.25%, rgba(0, 0, 0, 0.09) 27.08%, rgba(0, 0, 0, 0.9) 56.25%, #000000 60.48%);
-    -ms-grid-rows: 10vh auto;
-        grid-template-rows: 10vh auto;
+    grid-template-rows: 10vh auto;
   }
 }
 
 .gallery {
   grid-column: 1/-1;
-  -ms-grid-row: 2;
   grid-row: 2;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 55vw 30vw auto;
-      grid-template-columns: 55vw 30vw auto;
-  -ms-grid-rows: auto 20vh;
-      grid-template-rows: auto 20vh;
+  grid-template-columns: 55vw 30vw auto;
+  grid-template-rows: auto 20vh;
 }
-
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   .gallery {
-    -ms-grid-columns: 60vw 30vw auto;
-        grid-template-columns: 60vw 30vw auto;
-    -ms-grid-rows: auto 10vh;
-        grid-template-rows: auto 10vh;
+    grid-template-columns: 60vw 30vw auto;
+    grid-template-rows: auto 10vh;
   }
 }
-
 @media only screen and (min-height: 600px) and (max-width: 1200px) {
   .gallery {
-    -ms-grid-columns: 60vw 30vw auto;
-        grid-template-columns: 60vw 30vw auto;
-    -ms-grid-rows: auto 10vh;
-        grid-template-rows: auto 10vh;
+    grid-template-columns: 60vw 30vw auto;
+    grid-template-rows: auto 10vh;
   }
 }
 
 .table {
   position: relative;
-  -ms-grid-column: 1;
   grid-column: 1;
-  -ms-grid-row: 1;
   grid-row: 1;
   padding-left: 5vw;
   padding-top: 5vh;
 }
-
 @media only screen and (min-height: 600px) and (max-width: 1200px) {
   .table {
     padding-top: 10vh;
   }
 }
-
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   .table {
     padding-left: 2vw;
@@ -110,19 +86,17 @@ table, th, td {
   border: 0.5px solid rgba(150, 150, 150, 0.8);
   border-collapse: collapse;
   color: #DCDCDC;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 2vmin;
   line-height: 150%;
   letter-spacing: 0.01em;
 }
-
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   table, th, td {
     font-size: 3.8vh;
     line-height: 125%;
   }
 }
-
 @media only screen and (min-height: 600px) and (max-width: 1200px) {
   table, th, td {
     font-size: 2.5vh;
@@ -134,14 +108,12 @@ table {
   width: 40vw;
   height: 50vh;
 }
-
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   table {
     width: 50vw;
     height: 70vh;
   }
 }
-
 @media only screen and (min-height: 600px) and (max-width: 1200px) {
   table {
     width: 50vw;
@@ -153,13 +125,11 @@ th, td {
   padding: 10px;
   vertical-align: top;
 }
-
 @media (min-height: 900px) and (min-width: 1440px) {
   th, td {
     padding: 15px;
   }
 }
-
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   th, td {
     padding: 5px;
@@ -172,58 +142,24 @@ th {
 
 .img_wrapper {
   position: relative;
-  -ms-grid-column: 2;
   grid-column: 2;
-  -ms-grid-row: 1;
   grid-row: 1;
   padding: 5vw;
   width: 20vw;
   height: auto;
-  -webkit-animation: pulse 1s linear infinite;
-          animation: pulse 1s linear infinite;
+  animation: pulse 1s linear infinite;
 }
-
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   .img_wrapper {
     width: 45vh;
-    -webkit-animation: pulse-mob 1s linear infinite;
-            animation: pulse-mob 1s linear infinite;
+    animation: pulse-mob 1s linear infinite;
     padding: 4vw;
   }
 }
-
 @media only screen and (min-height: 600px) and (max-width: 1200px) {
   .img_wrapper {
     width: 35vh;
-    -webkit-animation: pulse-tab 1s linear infinite;
-            animation: pulse-tab 1s linear infinite;
-  }
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    background: radial-gradient(22vw 25vw, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
-  }
-  15% {
-    background: radial-gradient(22vw 25vw, rgba(255, 255, 255, 0.9) 31%, rgba(0, 0, 0, 0) 57%);
-  }
-  30% {
-    background: radial-gradient(22vw 25vw, rgba(255, 255, 255, 0.9) 32%, rgba(0, 0, 0, 0) 60%);
-  }
-  45% {
-    background: radial-gradient(22vw 25vw, rgba(255, 255, 255, 0.9) 33%, rgba(0, 0, 0, 0) 65%);
-  }
-  60% {
-    background: radial-gradient(22vw 25vw, rgba(255, 255, 255, 0.9) 33%, rgba(0, 0, 0, 0) 65%);
-  }
-  75% {
-    background: radial-gradient(22vw 25vw, rgba(255, 255, 255, 0.9) 32%, rgba(0, 0, 0, 0) 60%);
-  }
-  90% {
-    background: radial-gradient(22vw 25vw, rgba(255, 255, 255, 0.9) 31%, rgba(0, 0, 0, 0) 57%);
-  }
-  100% {
-    background: radial-gradient(22vw 25vw, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
+    animation: pulse-tab 1s linear infinite;
   }
 }
 
@@ -253,34 +189,6 @@ th {
     background: radial-gradient(22vw 25vw, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
   }
 }
-
-@-webkit-keyframes pulse-mob {
-  0% {
-    background: radial-gradient(45vh 50vh, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
-  }
-  15% {
-    background: radial-gradient(45vh 50vh, rgba(255, 255, 255, 0.9) 31%, rgba(0, 0, 0, 0) 57%);
-  }
-  30% {
-    background: radial-gradient(45vh 50vh, rgba(255, 255, 255, 0.9) 32%, rgba(0, 0, 0, 0) 60%);
-  }
-  45% {
-    background: radial-gradient(45vh 50vh, rgba(255, 255, 255, 0.9) 33%, rgba(0, 0, 0, 0) 65%);
-  }
-  60% {
-    background: radial-gradient(45vh 50vh, rgba(255, 255, 255, 0.9) 33%, rgba(0, 0, 0, 0) 65%);
-  }
-  75% {
-    background: radial-gradient(45vh 50vh, rgba(255, 255, 255, 0.9) 32%, rgba(0, 0, 0, 0) 60%);
-  }
-  90% {
-    background: radial-gradient(45vh 50vh, rgba(255, 255, 255, 0.9) 31%, rgba(0, 0, 0, 0) 57%);
-  }
-  100% {
-    background: radial-gradient(45vh 50vh, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
-  }
-}
-
 @keyframes pulse-mob {
   0% {
     background: radial-gradient(45vh 50vh, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
@@ -307,34 +215,6 @@ th {
     background: radial-gradient(45vh 50vh, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
   }
 }
-
-@-webkit-keyframes pulse-tab {
-  0% {
-    background: radial-gradient(38vh 43vh, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
-  }
-  15% {
-    background: radial-gradient(38vh 43vh, rgba(255, 255, 255, 0.9) 31%, rgba(0, 0, 0, 0) 57%);
-  }
-  30% {
-    background: radial-gradient(38vh 43vh, rgba(255, 255, 255, 0.9) 32%, rgba(0, 0, 0, 0) 60%);
-  }
-  45% {
-    background: radial-gradient(38vh 43vh, rgba(255, 255, 255, 0.9) 33%, rgba(0, 0, 0, 0) 65%);
-  }
-  60% {
-    background: radial-gradient(38vh 43vh, rgba(255, 255, 255, 0.9) 33%, rgba(0, 0, 0, 0) 65%);
-  }
-  75% {
-    background: radial-gradient(38vh 43vh, rgba(255, 255, 255, 0.9) 32%, rgba(0, 0, 0, 0) 60%);
-  }
-  90% {
-    background: radial-gradient(38vh 43vh, rgba(255, 255, 255, 0.9) 31%, rgba(0, 0, 0, 0) 57%);
-  }
-  100% {
-    background: radial-gradient(38vh 43vh, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
-  }
-}
-
 @keyframes pulse-tab {
   0% {
     background: radial-gradient(38vh 43vh, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
@@ -361,56 +241,46 @@ th {
     background: radial-gradient(38vh 43vh, rgba(255, 255, 255, 0.9) 30%, rgba(0, 0, 0, 0) 55%);
   }
 }
-
-#td1, #td2, #td3, #td4, #td5 {
+.table__pate {
   display: none;
 }
 
-#img1, #img2, #img3, #img4, #img5 {
+.image__pate {
   position: relative;
   width: 100%;
   display: none;
 }
-
 @media (min-height: 900px) and (min-width: 1440px) {
-  #img1, #img2, #img3, #img4, #img5 {
+  .image__pate {
     bottom: 0vh;
   }
 }
-
 @media (min-height: 700px) and (min-width: 1280px) {
-  #img1, #img2, #img3, #img4, #img5 {
+  .image__pate {
     bottom: -10%;
   }
 }
-
 @media only screen and (min-height: 600px) and (max-width: 1200px) {
-  #img1, #img2, #img3, #img4, #img5 {
+  .image__pate {
     bottom: -12vmax;
   }
 }
-
 @media only screen and (max-height: 600px) and (max-width: 900px) {
-  #img1, #img2, #img3, #img4, #img5 {
+  .image__pate {
     bottom: -5vmin;
   }
 }
-
 @media only screen and (max-height: 400px) and (max-width: 900px) {
-  #img1, #img2, #img3, #img4, #img5 {
+  .image__pate {
     bottom: -10vh;
   }
 }
-
-#img1 img, #img2 img, #img3 img, #img4 img, #img5 img {
+.image__pate img {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   height: auto;
 }
 
@@ -421,31 +291,23 @@ div#button1 {
   /*  background: rgba(255, 255, 255, 0.2); */
   top: 25vh;
   left: -20%;
-  -webkit-transition: 1s;
   transition: 1s;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
-
 div#button1 img {
   position: absolute;
-  -webkit-filter: sepia(50%);
-          filter: sepia(50%);
+  filter: sepia(50%);
   width: 5vh;
   margin-right: 0.5vw;
   margin-left: 1vw;
 }
-
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   div#button1 {
     left: -10%;
     top: 34vh;
   }
 }
-
 @media only screen and (min-height: 600px) and (max-width: 1200px) {
   div#button1 {
     left: -10%;
@@ -460,32 +322,24 @@ div#button2 {
   /* background: rgba(255, 255, 255, 0.2); */
   top: 25vh;
   right: -20%;
-  -webkit-transition: 1s;
   transition: 1s;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
-
 div#button2 img {
   position: absolute;
-  -webkit-filter: sepia(50%);
-          filter: sepia(50%);
+  filter: sepia(50%);
   width: 5vh;
   margin-right: 1vw;
   margin-left: 0.5vw;
   right: 0;
 }
-
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   div#button2 {
     right: -10%;
     top: 34vh;
   }
 }
-
 @media only screen and (min-height: 600px) and (max-width: 1200px) {
   div#button2 {
     right: -10%;
@@ -495,32 +349,26 @@ div#button2 img {
 
 div#button1:hover, div#button2:hover {
   margin: 0 0.5vw;
-  -webkit-transition: 1s;
   transition: 1s;
 }
 
 .back {
-  -ms-grid-column: 1;
   grid-column: 1;
-  -ms-grid-row: 1;
   grid-row: 1;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 3.5vh;
   text-align: left;
   color: #eee;
   padding-top: 3vh;
   padding-left: 5vw;
 }
-
 .back a, .back a:visited {
   color: #eee;
   text-decoration: none;
 }
-
 .back a:hover {
   color: #ffe7bb;
 }
-
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   .back {
     font-size: 6vh;
@@ -529,31 +377,27 @@ div#button1:hover, div#button2:hover {
 }
 
 .contacts {
-  -ms-grid-column: 3;
   grid-column: 3;
-  -ms-grid-row: 1;
   grid-row: 1;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 3.5vh;
   text-align: right;
   color: #eee;
   padding-top: 3vh;
   padding-right: 5vw;
 }
-
 .contacts a, .contacts a:visited {
   color: #eee;
   text-decoration: none;
 }
-
 .contacts a:hover {
   color: #ffe7bb;
 }
-
 @media only screen and (max-height: 600px) and (max-width: 900px) {
   .contacts {
     font-size: 6vh;
     padding-right: 2vw;
   }
 }
+
 /*# sourceMappingURL=pate.css.map */
